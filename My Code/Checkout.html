@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <link rel="stylesheet" href="Checkout.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+        <div class="checkout-main-box">
+            <div class="checkout-inside-box">
+                <div class="pos-checkout-box">
+
+                  <h1>Checkout</h1>
+                    <div id="checkout-items">
+
+
+                    </div>
+                  <h2>Subtotal:</h2>
+                    <div id="subtotal-price">
+
+                    </div>
+                  <h2>Total:</h2>
+                    <div id="total-price">
+
+                    </div>
+                </div>
+                <div class="pos-payment-info-box">
+                  <h1>Payment Selection</h1>
+                 
+                
+                  <form id="credit-card-form" action="">
+                    <div id="paypal-form">
+                      <label for="pp-button"></label>
+                      <input id="pp-button" type="radio" name="payment">
+                      <img class="pp-button-img" src="images/paypal-logo.png" alt="paypal-logo">
+                    </div>
+
+                    <div id="credit-card-radio">
+                      <input id="credit-selector" type="radio" name="payment">
+                      <label for="credit-selector"> Credit Card</label>
+                      <img class="credit-imgs" src="images/credit-card-logos.png" alt="credit-cards-img">
+                    </div>
+                    <div id="card-inputs-info">
+                      <label for="card-number"></label>
+                      <input id ="card-number" placeholder ="Card Number" type="number">
+                      <label for="card-name"></label>
+                      <input id="card-name" type="text" placeholder="Name on card">
+                      <label for="exp-date"></label>
+                      <input id="exp-date" type="text" placeholder="Expiration Date (MM/YY)">
+                      <label for="sec-code"></label>
+                      <input id="sec-code" type="number" placeholder="Security Code">
+                      <button type="submit"> Pay </button>
+                    </div>
+                  </form>
+
+                    <button> <a id="revise-order-link" href="Homepage.html">Revise Your Order</a></button>
+                </div>
+
+
+            </div>
+
+        </div>
+      </header>
+
+    
+     
+     
+     <script>
+
+        let cardRadioBttn = document.getElementById("credit-card-radio");
+        let cardInputForm = document.getElementById("card-inputs-info");
+
+        cardRadioBttn.addEventListener("click", e => {
+
+        cardInputForm.style.display = "block";
+        })
+
+
+      //   const products = [];
+      //   function checkout(){
+
+
+      // forEach Loop
+      //     }
+
+ </script>   
+</body>
+</html>
