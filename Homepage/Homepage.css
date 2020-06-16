@@ -127,7 +127,12 @@ section {
  * Restore Bootstrap 3 "hidden" utility classes.
 \*/
 
-.custom-popup-menu { 
+
+.item { 
+    cursor: pointer;
+}
+
+#custom-popup-menu { 
     display: none;
 }
 
