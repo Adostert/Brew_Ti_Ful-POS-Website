@@ -127,6 +127,11 @@ section {
  * Restore Bootstrap 3 "hidden" utility classes.
 \*/
 
+.custom-popup-menu { 
+    display: none;
+}
+
+
 /* Breakpoint XS */
 @media (max-width: 575px) {
     .hidden-xs-down, .hidden-sm-down, .hidden-md-down, .hidden-lg-down, .hidden-xl-down,
