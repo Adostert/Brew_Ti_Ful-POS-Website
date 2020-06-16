@@ -6,6 +6,7 @@
 html,
 body {
     height: 100%;
+    overflow-x: hidden;
 }
 
 
@@ -132,9 +133,11 @@ section {
     cursor: pointer;
 }
 
-#custom-popup-menu { 
-    display: none;
-}
+/* #custom-popup-menu { 
+    display: block;
+    position: fixed;
+    z-index: 10;
+} */
 
 
 /* Breakpoint XS */
