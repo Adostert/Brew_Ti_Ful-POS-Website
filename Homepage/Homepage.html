@@ -3,7 +3,7 @@
 <head>
   <link rel="stylesheet" href="Homepage.css">
   <link rel="stylesheet" href="../../bootstrap-4.5.0-dist/css/bootstrap.css">
-  <link rel="stylesheet" href="custom-popup.css">
+  <link rel="stylesheet" href="../custom-popup.css">
   <script type="text/javascript" src="jquery.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -74,11 +74,11 @@
     </div>
     <div class="row justify-content-center align-items-start">
       <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-3 mt-3">
-        <div class="item">
+        <div class="item" onclick="openPopupMenu()">
           <img class="img-thumbnail"
-            src="https://i.insider.com/59679abb0976db5e008b4ddb?width=1100&format=jpeg&auto=webp" alt="" />
+            src="../images/coffee.jpeg" alt="coffee" />
           <!-- THIS IS WHERE THE COFFEE IMAGES BEGIN -->
-          <div class="row text-center">
+          <div class="row text-center"">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
               <h4 class="product-name">Coffee</h4>
             </div>
@@ -92,7 +92,7 @@
       <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-3 mt-3">
         <div class="item">
           <img class="img-thumbnail"
-            src="https://i.insider.com/59679abb0976db5e008b4ddb?width=1100&format=jpeg&auto=webp" alt="" />
+            src="../images/latte.jpeg" alt="latte" />
           <div class="row text-center">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
               <h4 class="product-name">Latte</h4>
@@ -106,10 +106,10 @@
       <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-3 mt-3">
         <div class="item">
           <img class="img-thumbnail"
-            src="https://i.insider.com/59679abb0976db5e008b4ddb?width=1100&format=jpeg&auto=webp" alt="" />
+            src="../images/espresso.jpeg" alt="espresso" />
           <div class="row text-center">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-              <h4 class="product-name">Cappuchino</h4>
+              <h4 class="product-name">Espresso</h4>
             </div>
             <div class="col-lg-6 col-md-6 product-price">
               $4.00
@@ -120,10 +120,10 @@
       <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-3 mt-3">
         <div class="item">
           <img class="img-thumbnail"
-            src="https://i.insider.com/59679abb0976db5e008b4ddb?width=1100&format=jpeg&auto=webp" alt="" />
+            src="../images/tea.jpeg" alt="Tea" />
           <div class="row text-center">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-              <h4 class="product-name">Americano</h4>
+              <h4 class="product-name">Herbal Tea</h4>
             </div>
             <div class="col-lg-6 col-md-6 product-price">
               $6.00
@@ -134,10 +134,24 @@
       <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-3 mt-3">
         <div class="item">
           <img class="img-thumbnail"
-            src="https://i.insider.com/59679abb0976db5e008b4ddb?width=1100&format=jpeg&auto=webp" alt="" />
+            src="../images/lemonade.jpeg" alt="CBD Lemonaide" />
           <div class="row text-center">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-              <h4 class="product-name">Pastry</h4>
+              <h4 class="product-name">CBD Lemonaide</h4>
+            </div>
+            <div class="col-lg-6 col-md-6 product-price">
+              $6.00
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-3 mt-3">
+        <div class="item">
+          <img class="img-thumbnail"
+            src="../images/croissant.jpeg" alt="Croissant" />
+          <div class="row text-center">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <h4 class="product-name">Croissant</h4>
             </div>
             <div class="col-lg-6 col-md-6 product-price">
               $2.00
@@ -148,24 +162,10 @@
       <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-3 mt-3">
         <div class="item">
           <img class="img-thumbnail"
-            src="https://i.insider.com/59679abb0976db5e008b4ddb?width=1100&format=jpeg&auto=webp" alt="" />
+            src="../images/quiche.jpeg" alt="Quiche" />
           <div class="row text-center">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-              <h4 class="product-name">Croissant</h4>
-            </div>
-            <div class="col-lg-6 col-md-6 product-price">
-              $1.80
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-3 mt-3">
-        <div class="item">
-          <img class="img-thumbnail"
-            src="https://i.insider.com/59679abb0976db5e008b4ddb?width=1100&format=jpeg&auto=webp" alt="" />
-          <div class="row text-center">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-              <h4 class="product-name">Danish</h4>
+              <h4 class="product-name">Quiche</h4>
             </div>
             <div class="col-lg-6 col-md-6 product-price">
               $2.50
@@ -176,10 +176,38 @@
       <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-3 mt-3">
         <div class="item">
           <img class="img-thumbnail"
-            src="https://i.insider.com/59679abb0976db5e008b4ddb?width=1100&format=jpeg&auto=webp" alt="" />
+            src="../images/cheesecake.jpeg" alt="Cheesecake" />
           <div class="row text-center">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-              <h4 class="product-name">Quiche</h4>
+              <h4 class="product-name">Cheesecake</h4>
+            </div>
+            <div class="col-lg-6 col-md-6 product-price">
+              $6.00
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-3 mt-3">
+        <div class="item">
+          <img class="img-thumbnail"
+            src="../images/cinnamon-roll.jpeg" alt="Cinnamon Roll" />
+          <div class="row text-center">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <h4 class="product-name">Cannabis Cinnabon</h4>
+            </div>
+            <div class="col-lg-6 col-md-6 product-price">
+              $1.80
+            </div>
+          </div>
+        </div>
+      </div> 
+      <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-3 mt-3">
+        <div class="item">
+          <img class="img-thumbnail"
+            src="../images/mj-mudslide.jpeg" alt="Marijuana Mudslide" />
+          <div class="row text-center">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <h4 class="product-name">Marijuana Mudslide</h4>
             </div>
             <div class="col-lg-6 col-md-6 product-price">
               $7.00
@@ -193,11 +221,7 @@
   </section>
   </div>
 
-  <div class="custom-popup-menu">
-    <button class="order-now" onclick="openPopupMenu()"> 
-      Order Now
-  </button>
-
+  <div id="custom-popup-menu">
   <div id="popup-bg">
       <div class="popup-main">
 
@@ -210,13 +234,13 @@
 
           <div class="image-container">
           <div class="image">
-              <img src="coffe-2.jpeg" alt="coffee on table" class="item-image">
+              <img src="../images/coffee.jpeg" alt="coffee on table" class="item-image">
           </div>
       </div>
 
           <div class="category">
-              <h4>Size</h4>
-              <p>Required</p>
+              <h4 class="popup">Size</h4>
+              <p class="popup">Required</p>
           </div>
           <div class="options">
               <form action="#">
@@ -235,7 +259,7 @@
               </form>
           </div>
 
-          <div class="category"><h4>Milk</h4></div>
+          <div class="category"><h4 class=popup>Milk</h4></div>
           <div class="options">
               <form action="#">
                   <input type="checkbox" id="whole" name="milk" value="whole-milk">
@@ -291,6 +315,7 @@
   </div>
 
   <script src="Homepage.js"></script>
+  <script src="tanita.js"></script>
 </body>
 
 </html>
