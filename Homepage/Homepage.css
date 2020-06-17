@@ -219,7 +219,7 @@ a:hover {
 	opacity: 1;
 }
 
-/* Hidden and visible elemnt from Bootsrap3.0 */
+/* Hidden and visible element from Bootstrap3.0 */
 /*\
  * Restore Bootstrap 3 "hidden" utility classes.
 \*/
@@ -229,12 +229,13 @@ a:hover {
     cursor: pointer;
 }
 
-/* #custom-popup-menu { 
-    display: block;
-    position: fixed;
-    z-index: 10;
+/* hover over entire item div 
+.item:hover {
+    border: 1px solid rgb(160, 199, 180);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: none;
 } */
-
 
 /* Breakpoint XS */
 @media (max-width: 575px) {
