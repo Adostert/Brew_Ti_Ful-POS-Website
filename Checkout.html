@@ -7,9 +7,13 @@
   </head>
 
   <body>
+    
     <div id="background-shadow">
       <div id="checkout-inside-box">
         <!--Start of Total/Subtotal Info Box -->
+        <div id="exit-out-checkout">
+          <button onclick ="closeCheckout()" id="open-close-bttn">X</button>
+        </div>
         <h1 id="checkout-h1">Checkout</h1>
         <div class="pos-checkout-box">
           <div id="checkout-items"></div>
@@ -134,7 +138,15 @@
         let cardInputFormPP = document.getElementById("card-inputs-info");
 
         cardInputFormPP.style.display = "none";
-      }
+      };
+
+      function closeCheckout(){
+
+        let bgShadow = document.getElementById("background-shadow")
+
+        bgShadow.style.display = "none";
+
+      };
     </script>
   </body>
 </html>
