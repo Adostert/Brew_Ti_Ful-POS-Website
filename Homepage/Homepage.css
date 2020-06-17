@@ -8,21 +8,122 @@ body {
     height: 100%;
     overflow-x: hidden;
 }
-
-
-#header {
+/* start of shopping cart icon */
+.icon-cart {
+    width: 48px;
+    height: 48px;
+    position: relative;
+    margin-left: 25px;
+  }
+  
+  .icon-cart .cart-line-1 {
+    width: 15%;
+    height: 7%;
+    position: absolute;
+    left: 8%;
+    top: 25%;
+    -webkit-transform: rotate(5deg);
+    -moz-transform: rotate(5deg);
+    -ms-transform: rotate(5deg);
+    transform: rotate(5deg); 
+    background-color: #000;
+    border-bottom-left-radius: 35%;
+  }
+  
+  .icon-cart .cart-line-2 {
+    width: 35%;
+    height: 7%;
+    position: absolute;
+    left: 6%;
+    top: 40%;
+    -webkit-transform: rotate(80deg);
+    -moz-transform: rotate(80deg);
+    -ms-transform: rotate(80deg);
+    transform: rotate(80deg); 
+    background-color: #000;
+  }
+  
+  .icon-cart .cart-line-2:before {
+    content: "";
+    width: 120%;
     height: 100%;
+    position: absolute;
+    left: 45%;
+    top: -280%;
+    -webkit-transform: rotate(-80deg);
+    -moz-transform: rotate(-80deg);
+    -ms-transform: rotate(-80deg);
+    transform: rotate(-80deg); 
+    background-color: inherit;
+  }
+  
+  .icon-cart .cart-line-2:after {
+    content: "";
+    width: 70%;
+    height: 100%;
+    position: absolute;
+    left: 59%;
+    top: -670%;
+    background-color: inherit;
+    transform: rotate(40deg);
+    -moz-transform: rotate(40deg);
+    -ms-transform: rotate(40deg);
+    transform: rotate(40deg); 
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 25%;
+  }
+  
+  .icon-cart .cart-line-3 {
+    width: 30%;
+    height: 7%;
+    position: absolute;
+    left: 33%;
+    top: 45%;
+    background-color: #000;
+  }
+  
+  .icon-cart .cart-line-3:after {
+    content: "";
+    width: 124%;
+    height: 100%;
+    position: absolute;
+    top: -150%;
+    left: -5%;
+    background-color: inherit;
+  }
+  
+  .icon-cart .cart-wheel {
+    width: 12%;
+    height: 12%;
+    background-color: #000;
+    border-radius: 100%;
+    position: absolute;
+    left: 28%;
+    bottom: 20%;
+  }
+  
+  .icon-cart .cart-wheel:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+    border-radius: 100%;
+    position: absolute;
+    left: 200%;
+    bottom: 0;
+  }
+  /* end of shopping cart icon */
+
+  /* V everything above the items V */
+#header {
+    height: 70%;
     background-color: #A0C7B4;
     background-size: cover;
 }
-
-#email-me, #form {
-    display: none;
-}
-
+/* container for the items */
 section {
     min-height: 100%;
-  background-color: none;
+    background-color: #A0C7B4;
 }
 .logo {
     color: black;
@@ -69,59 +170,54 @@ section {
 .product-name{
   font-family: "Knewave";
 }
-
-.add-to-cart {
-  
-    border: 1px solid #b0aac0;
-    background-color: #84ebd1;
-    color: black;
-}
-
-    .add-to-cart:hover {
-        background-color: #b0aac0;
-}
-/*Shopping cart card effect*/
-#cart-items {
-    position: absolute;
-    top: 90%;
-    right: 0%;
-    z-index: 999;
-    border: 0px !important;
-    display: none;
-    color: white;
-}
-
-
-#items-basket {
-    position: absolute;
-    display: none;
-    top: -5px;
-    left: -10px;
-    width: 1.45rem;
-    height: 1.25rem;
-    border-radius: 50%;
-    background: #b76bd1;
-    color: white;
-    cursor: pointer;
-}
-
-.remove {
-    cursor: pointer;
-}
-
-.cart {
-    float: right;
-    text-align: center;
-    color: rgba(195, 18, 77, 0.7);
-    position: relative;
-}
-
-.remove {
-    color: #eb5252;
-}
 .logo:hover {
     transform: translateX(-10%) scale(1.2);
   }
+h1 {
+	font-family: "Knewave";
+	text-transform: uppercase;
+}
+
+
+a p {
+	color: black;
+	margin-top: 5px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+.frame {
+	text-align: center;	
+	position: relative;
+	cursor: pointer;	
+	
+}
+.frame img {
+	width: 400px;
+	height: 400px;
+}
+.frame .details {
+	width: 50%;
+	height: 58%;	
+	padding: 5% 8%;
+	position: absolute;
+	content: "";
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotateY(90deg);
+	transform-origin: 50%;
+	background: rgba(255,255,255,0.9);	
+	opacity: 0;
+	transition: all 0.4s ease-in;
+	
+}
+.frame:hover .details {
+	transform: translate(-50%, -50%) rotateY(0deg);
+	opacity: 1;
+}
 
 /* Hidden and visible elemnt from Bootsrap3.0 */
 /*\
