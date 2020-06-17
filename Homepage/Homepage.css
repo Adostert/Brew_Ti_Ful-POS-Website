@@ -6,6 +6,7 @@
 html,
 body {
     height: 100%;
+    overflow-x: hidden;
 }
 
 
@@ -126,6 +127,18 @@ section {
 /*\
  * Restore Bootstrap 3 "hidden" utility classes.
 \*/
+
+
+.item { 
+    cursor: pointer;
+}
+
+/* #custom-popup-menu { 
+    display: block;
+    position: fixed;
+    z-index: 10;
+} */
+
 
 /* Breakpoint XS */
 @media (max-width: 575px) {
