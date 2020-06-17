@@ -1,95 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <link rel="stylesheet" href="Checkout.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
 
-<head>
-
-  <link rel="stylesheet" href="Checkout.css">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-
-<body>
-
-  <div class="checkout-main-box">
-    <div class="checkout-inside-box">
-      <div class="pos-checkout-box">
-
+  <body>
+    <div id="background-shadow">
+      <div id="checkout-inside-box">
+        <!--Start of Total/Subtotal Info Box -->
         <h1 id="checkout-h1">Checkout</h1>
-        <div id="checkout-items">
-
-
+        <div class="pos-checkout-box">
+          <div id="checkout-items"></div>
+          <h2>Subtotal:</h2>
+          <div id="subtotal-price"></div>
+          <h2>Total:</h2>
+          <div id="total-price"></div>
         </div>
-        <h2>Subtotal:</h2>
-        <div id="subtotal-price">
+        <div id="payment-bill-add-box">
+          <!--Start of Payment Info Box -->
+          <div class="pos-payment-info-box">
+            <h1 id="pay-select-h1">Payment Selection</h1>
 
-        </div>
-        <h2>Total:</h2>
-        <div id="total-price">
+            <form id="credit-card-form" action="">
+              <div onclick="cardFormRemove()" id="paypal-form">
+                <input id="pp-button" type="radio" name="payment" />
+                <img
+                  class="pp-button-img"
+                  src="images/paypal-logo.png"
+                  alt="paypal-logo"
+                />
+              </div>
 
+              <div id="credit-card-radio">
+                <input id="credit-selector" type="radio" name="payment" />
+                <label for="credit-selector"></label>
+                <img
+                  class="credit-imgs"
+                  src="images/credit-card-logos.png"
+                  alt="credit-cards-img"
+                />
+              </div>
+
+              <div id="card-inputs-info">
+                <form action="">
+                  <input
+                    class="form-input"
+                    type="text"
+                    placeholder="Name on card"
+                  />
+
+                  <input
+                    class="form-input"
+                    placeholder="Card Number"
+                    type="number"
+                    maxlength="19"
+                    max="19"
+                  />
+
+                  <input
+                    class="form-input"
+                    type="text"
+                    placeholder="Expiration Date (MM/YY)"
+                    maxlength="5"
+                  />
+
+                  <input
+                    class="form-input"
+                    type="number"
+                    placeholder="Security Code"
+                    maxlength="4"
+                  />
+
+                  <button id="submit-button" type="submit">Pay</button>
+                </form>
+              </div>
+            </form>
+          </div>
+
+          <div id="bill-ship-address">
+            <h1 id="bill-add-h1">Billing Address</h1>
+            <form action="">
+              <input type="text" name="" id="" placeholder="Name" />
+              <input type="email" name="" id="" placeholder="Email" />
+              <input type="text" placeholder="Address" />
+              <input type="text" placeholder="City" />
+              <input type="number" value="" placeholder="Zip Code" />
+              <input type="text" placeholder="State" />
+              <input type="checkbox" checked="checked" /> Shipping address same
+              as billing
+            </form>
+          </div>
         </div>
+        <button id="revise-order-button">
+          <a id="revise-order-link" href="Homepage/Homepage.html"
+            >Revise Your Order</a
+          >
+        </button>
       </div>
-      <div class="pos-payment-info-box">
-        <h1 id="pay-select-h1">Payment Selection</h1>
-
-        <form id="credit-card-form" action="">
-          <div onclick="cardFormRemove()" id="paypal-form">
-            <input id="pp-button" type="radio" name="payment">
-            <img class="pp-button-img" src="images/paypal-logo.png" alt="paypal-logo">
-          </div>
-
-          <div id="credit-card-radio">
-            <input id="credit-selector" type="radio" name="payment">
-            <label for="credit-selector"></label>
-            <img class="credit-imgs" src="images/credit-card-logos.png" alt="credit-cards-img">
-          </div>
-
-          <div id="card-inputs-info">
-            <label for="card-number"></label>
-            <input id="card-number" placeholder="Card Number" type="number">
-            <label for="card-name"></label>
-            <input id="card-name" type="text" placeholder="Name on card">
-            <label for="exp-date"></label>
-            <input id="exp-date" type="text" placeholder="Expiration Date (MM/YY)">
-            <label for="sec-code"></label>
-            <input id="sec-code" type="number" placeholder="Security Code">
-            <button id="submit-button" type="submit"> Pay </button>
-
-          </div>
-        </form>
-
-        <button id="revise-order-button"> <a id="revise-order-link" href="Homepage/Homepage.html">Revise Your Order</a></button>
-
-
-      </div>
-
-
     </div>
 
-  </div>
-  </header>
+    <script>
+      let cardRadioBttn = document.getElementById("credit-card-radio");
+      let cardInputForm = document.getElementById("card-inputs-info");
 
+      cardRadioBttn.addEventListener("click", (e) => {
+        let submitBttn = document.getElementById("submit-button");
+        let formInputs = document.getElementsByClassName("form-input");
 
+        let i;
+        for (i = 0; i < formInputs.length; i++) {
+          formInputs[i].style.height = "30px";
+        }
 
+        cardInputForm.style.display = "flex";
+        cardInputForm.style.flexDirection = "column";
+        cardInputForm.style.marginBottom = "15px";
+        submitBttn.style.backgroundColor = "rgb(0, 128, 128)";
+        submitBttn.style.border = "none";
+        submitBttn.style.height = "40px";
+        submitBttn.style.textAlign = "center";
+        submitBttn.style.fontWeight = "900";
+        submitBttn.style.fontFamily = "Raleway";
+        submitBttn.style.fontSize = "15px";
+        submitBttn.style.color = "white";
+        formInputs.style.height = "30px";
+      });
 
-  <script>
-    let cardRadioBttn = document.getElementById("credit-card-radio");
-    let cardInputForm = document.getElementById("card-inputs-info");
+      function cardFormRemove() {
+        let payPalRadio = document.getElementById("pp-button");
 
-    cardRadioBttn.addEventListener("click", e => {
+        let cardInputFormPP = document.getElementById("card-inputs-info");
 
-      cardInputForm.style.display = "block";
-    })
-
-    function cardFormRemove() {
-
-      let payPalRadio = document.getElementById("pp-button");
-
-      let cardInputFormPP = document.getElementById("card-inputs-info");
-
-      cardInputFormPP.style.display = "none";
-    }
-
-  </script>
-</body>
-
+        cardInputFormPP.style.display = "none";
+      }
+    </script>
+  </body>
 </html>
