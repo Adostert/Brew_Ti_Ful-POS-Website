@@ -27,30 +27,30 @@
               <a class="nav-link js-scroll-trigger" href="#Product"> <i class="fas fa-list-alt hidden-md-up"
                   style="font-size:1.5em"></i> <span class="hidden-sm-down">Product </span></a>
             </li>
-            <li class="nav-item pl-2 pr-2" >
+            <li class="nav-item pl-2 pr-2">
               <div class="icon-cart" style="float: left">
-      <div class="cart-line-1" style="background-color: #D37ABC"></div>
-      <div class="cart-line-2" style="background-color: #D37ABC"></div>
-      <div class="cart-line-3" style="background-color: #D37ABC"></div>
-      <div class="cart-wheel" style="background-color: #D37ABC"></div>
-    </div>
-        </li>
-        </ul>
-      </div>
+                <div class="cart-line-1" style="background-color: #D37ABC"></div>
+                <div class="cart-line-2" style="background-color: #D37ABC"></div>
+                <div class="cart-line-3" style="background-color: #D37ABC"></div>
+                <div class="cart-wheel" style="background-color: #D37ABC"></div>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
     <!-- OUR LOGO IMAGE -->
     <div class="container text-center">
-      <div class = "frame col-xs-6">
-        <img src = "https://i.ibb.co/vDzFSrD/Brew-tiful-Coffee-Shop-Wake-Bake-Pastries-Logo.jpgg">
-        <div class = "details">
+      <div class="frame col-xs-6">
+        <img src="../images/bcswkp-transp-logo.png" alt="Brew-ti-ful">
+        <div class="details">
           <h1>Meet the Brew Crew</h1>
           <p><strong> <br>Tanita Plaengprawat, Aaron Armstron and Amber Dostert.</strong>
             <br> Providing the finest experience.</p>
         </div>
-        
+
       </div>
-  </div>	
+    </div>
   </header>
 
   <!-- The Modal -->
@@ -58,108 +58,121 @@
 
     <!-- Modal content -->
     <div class="modal-content">
-      <span class="close">&times;</span>
-      <p>Some text in the Modal..</p>
 
-      <div id="custom-popup-menu">
-        <div id="popup-bg">
-          <div class="popup-main">
-    
-            <div class="header-container">
-              <div class="header">
-                <div class="item-header">
-                  <h2>Coffee</h2>
-                </div>
-                <div class="close-popup" title="Close" onclick="closePopupMenu()"> x </div>
-              </div>
-            </div>
-    
-            <div class="image-container">
-              <div class="image">
-                <img src="../images/coffee.jpeg" alt="coffee on table" class="item-image">
-              </div>
-            </div>
-    
-            <div class="category">
-              <h4 class="popup">Size</h4>
-              <p class="popup">Required</p>
-            </div>
-            <div class="options">
-              <form action="#">
-                <div class="option-row">
-                  <div class="option-label">
-                    <input type="radio" id="small" name="size" value="small">
-                    <label for="small">Small</label>
-                  </div>
-                  <div class="amount">$1.75</div>
-                </div>
-                <input type="radio" id="medium" name="size" value="medium">
-    
-                <label for="medium">Medium</label><br>
-                <input type="radio" id="large" name="size" value="large">
-                <label for="large">Large</label>
-              </form>
-            </div>
-    
-            <div class="category">
-              <h4 class=popup>Milk</h4>
-            </div>
-            <div class="options">
-              <form action="#">
-                <input type="checkbox" id="whole" name="milk" value="whole-milk">
-                <label for="whole-milk">Whole Milk</label><br>
-                <input type="checkbox" id="skim" name="milk" value="skim-milk">
-                <label for="skim-milk">Skim Milk</label><br>
-                <input type="checkbox" id="almond" name="milk" value="almond-milk">
-                <label for="almond-milk">Almond Milk</label><br>
-                <input type="checkbox" id="oat" name="milk" value="oat-milk">
-                <label for="oat-milk">Oat Milk</label><br>
-              </form>
-            </div>
-    
-            <div class="category">
-              <h4>Sweetener</h4>
-            </div>
-            <div class="options">
-              <form action="#">
-                <input type="checkbox" id="sugar" name="sweetener" value="sugar">
-                <label for="sugar">Sugar</label><br>
-                <input type="checkbox" id="sugar-in-the-raw" name="sweetener" value="sugar in the raw">
-                <label for="sugar in the raw">Sugar in the Raw</label><br>
-                <input type="checkbox" id="stevia" name="sweetener" value="stevia">
-                <label for="stevia">Stevia</label><br>
-                <input type="checkbox" id="honey" name="sweetener" value="honey">
-                <label for="honey">Honey</label><br>
-              </form>
-            </div>
-    
-            <div class="quantity-container">
-              <div class="form-group">
-                <div class="category-quantity">
-                  <h4>Quantity</h4>
-                  <div class="input-group">
-                    <div class="input-group-btn">
-                      <button id="down" class="btn btn-default" onclick=" down('0')"> - </button>
-                    </div>
-                    <input type="text" id="myNumber" class="form-control input-number" value="1" />
-                    <div class="input-group-btn">
-                      <button id="up" class="btn btn-default" onclick="up('10')">+ </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-    
-            </div>
-    
-            <button class="add-button">
-              <div class="add-cart">Add to cart</div>
-              <div class="add-total">Total</div>
-            </button>
-    
+      <div class="header-container">
+        <div class="header">
+          <div class="item-header">
+            <h2 class="popup">Coffee</h2>
           </div>
-    
+        </div>
+        <span class="close">&times;</span>
+      </div>
+
+      <div class="image-container">
+        <div class="image">
+          <img src="../images/coffee.jpeg" alt="coffee on table" class="item-image">
         </div>
       </div>
+
+      <div class="category">
+        <p class="category-header">Size</p>
+        <p class="required">Required</p>
+      </div>
+      <div class="options">
+        <form action="#">
+          <div class="option-row">
+            <div class="option-label">
+              <input type="radio" id="small" name="size" value="small">
+              <label for="small">Small</label>
+            </div>
+            <div class="amount">$1.25</div>
+          </div>
+          <div class="option-row">
+            <div class="option-label">
+              <input type="radio" id="medium" name="size" value="medium">
+              <label for="medium">Medium</label>
+            </div>
+            <div class="amount">$1.60</div>
+          </div>
+          <div class="option-row">
+            <div class="option-label">
+              <input type="radio" id="large" name="size" value="large">
+              <label for="large">Large</label>
+            </div>
+            <div class="amount">$2.00</div>
+          </div>
+
+        </form>
+      </div>
+
+      <div class="category">
+        <p class="category-header">Milk</p>
+      </div>
+      <div class="options">
+        <form action="#">
+          <input type="checkbox" id="whole" name="milk" value="whole-milk">
+          <label for="whole-milk">Whole Milk</label><br>
+          <input type="checkbox" id="skim" name="milk" value="skim-milk">
+          <label for="skim-milk">Skim Milk</label><br>
+
+          <div class="option-row">
+            <div class="option-label">
+              <input type="checkbox" id="almond" name="milk" value="almond-milk">
+              <label for="almond-milk">Almond Milk</label>
+            </div>
+            <div class="amount">+$0.50</div>
+          </div>
+          <div class="option-row">
+            <div class="option-label">
+              <input type="checkbox" id="oat" name="milk" value="oat-milk">
+              <label for="oat-milk">Oat Milk</label>
+            </div>
+            <div class="amount">+$0.50</div>
+          </div>
+        </form>
+      </div>
+
+      <div class="category">
+        <p class="category-header">Sweetener</p>
+      </div>
+      <div class="options">
+        <form action="#">
+          <input type="checkbox" id="sugar" name="sweetener" value="sugar">
+          <label for="sugar">Sugar</label><br>
+          <input type="checkbox" id="sugar-in-the-raw" name="sweetener" value="sugar in the raw">
+          <label for="sugar in the raw">Sugar in the Raw</label><br>
+          <input type="checkbox" id="stevia" name="sweetener" value="stevia">
+          <label for="stevia">Stevia</label><br>
+          <input type="checkbox" id="honey" name="sweetener" value="honey">
+          <label for="honey">Honey</label><br>
+        </form>
+      </div>
+
+      <div class="quantity-container">
+        <div class="form-group">
+          <div class="category-quantity">
+            <div class="category">
+              <p class="category-header">Quantity</p>
+            </div>
+            <div class="input-group">
+              <div class="input-group-btn">
+                <button id="down" class="btn btn-default" onclick=" down('0')"> - </button>
+              </div>
+              <input type="text" id="myNumber" class="form-control input-number" value="1" />
+              <div class="input-group-btn">
+                <button id="up" class="btn btn-default" onclick="up('10')">+ </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <button class="add-button">
+        <div class="add-cart">Add to cart</div>
+        <div class="add-total">Total</div>
+      </button>
+
     </div>
 
   </div>
@@ -174,136 +187,136 @@
       <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-3 mt-3">
         <div class="item">
           <img class="img-thumbnail" src="../images/coffe.jpeg" alt="coffee" />
-          
+
           <div class="row text-center">
             <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <h4 class="product-name">Coffee</h4>
-          </div>
-          <div class="col-lg-6 col-md-6 product-price">
-            $2.50
-          </div>
+              <h4 class="product-name">Coffee</h4>
+            </div>
+            <div class="col-lg-6 col-md-6 product-price">
+              $2.50
+            </div>
 
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-3 mt-3">
-      <div class="item">
-        <img class="img-thumbnail" src="../images/latte.jpg" alt="latte" />
-        <div class="row text-center">
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <h4 class="product-name">Latte</h4>
-          </div>
-          <div class="col-lg-6 col-md-6 product-price">
-            $5.00
           </div>
         </div>
       </div>
-    </div>
-    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-3 mt-3">
-      <div class="item">
-        <img class="img-thumbnail" src="../images/tea-3.jpeg" alt="Tea" />
-        <div class="row text-center">
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <h4 class="product-name">Herbal Tea</h4>
-          </div>
-          <div class="col-lg-6 col-md-6 product-price">
-            $6.00
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-3 mt-3">
-      <div class="item">
-        <img class="img-thumbnail" src="../images/lemonade.jpeg" alt="CBD Lemonaide" />
-        <div class="row text-center">
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <h4 class="product-name">CBD Lemonaide</h4>
-          </div>
-          <div class="col-lg-6 col-md-6 product-price">
-            $6.00
+      <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-3 mt-3">
+        <div class="item">
+          <img class="img-thumbnail" src="../images/latte.jpg" alt="latte" />
+          <div class="row text-center">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <h4 class="product-name">Latte</h4>
+            </div>
+            <div class="col-lg-6 col-md-6 product-price">
+              $5.00
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-3 mt-3">
-      <div class="item">
-        <img class="img-thumbnail" src="../images/croissant.jpeg" alt="Croissant" />
-        <div class="row text-center">
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <h4 class="product-name">Croissant</h4>
-          </div>
-          <div class="col-lg-6 col-md-6 product-price">
-            $2.00
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-3 mt-3">
-      <div class="item">
-        <img class="img-thumbnail" src="../images/danish.jpg" alt="Danish" />
-        <div class="row text-center">
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <h4 class="product-name">Dank-ish</h4>
-          </div>
-          <div class="col-lg-6 col-md-6 product-price">
-            $4.00
+      <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-3 mt-3">
+        <div class="item">
+          <img class="img-thumbnail" src="../images/tea-3.jpeg" alt="Tea" />
+          <div class="row text-center">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <h4 class="product-name">Herbal Tea</h4>
+            </div>
+            <div class="col-lg-6 col-md-6 product-price">
+              $6.00
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-3 mt-3">
-      <div class="item">
-        <img class="img-thumbnail" src="../images/quiche.jpeg" alt="Quiche" />
-        <div class="row text-center">
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <h4 class="product-name">Quiche</h4>
-          </div>
-          <div class="col-lg-6 col-md-6 product-price">
-            $2.50
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-3 mt-3">
-      <div class="item">
-        <img class="img-thumbnail" src="../images/cream-puff.jpeg" alt="Cream Puff" />
-        <div class="row text-center">
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <h4 class="product-name">Cream Puff (Puff Pass)</h4>
-          </div>
-          <div class="col-lg-6 col-md-6 product-price">
-            $6.00
+      <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-3 mt-3">
+        <div class="item">
+          <img class="img-thumbnail" src="../images/lemonade.jpeg" alt="CBD Lemonaide" />
+          <div class="row text-center">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <h4 class="product-name">CBD Lemonaide</h4>
+            </div>
+            <div class="col-lg-6 col-md-6 product-price">
+              $6.00
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-3 mt-3">
-      <div class="item">
-        <img class="img-thumbnail" src="../images/cinnamon-roll.jpeg" alt="Cinnamon Roll" />
-        <div class="row text-center">
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <h4 class="product-name">Cannabis Cinnabong</h4>
-          </div>
-          <div class="col-lg-6 col-md-6 product-price">
-            $1.80
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-3 mt-3">
-      <div class="item">
-        <img class="img-thumbnail" src="../images/mj-mudslide.jpeg" alt="Marijuana Mudslide" />
-        <div class="row text-center">
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <h4 class="product-name">Marijuana Mudslide</h4>
-          </div>
-          <div class="col-lg-6 col-md-6 product-price">
-            $7.00
+      <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-3 mt-3">
+        <div class="item">
+          <img class="img-thumbnail" src="../images/croissant.jpeg" alt="Croissant" />
+          <div class="row text-center">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <h4 class="product-name">Croissant</h4>
+            </div>
+            <div class="col-lg-6 col-md-6 product-price">
+              $2.00
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- END OF COFFEE IMAGES -->
+      <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-3 mt-3">
+        <div class="item">
+          <img class="img-thumbnail" src="../images/danish.jpg" alt="Danish" />
+          <div class="row text-center">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <h4 class="product-name">Dank-ish</h4>
+            </div>
+            <div class="col-lg-6 col-md-6 product-price">
+              $4.00
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-3 mt-3">
+        <div class="item">
+          <img class="img-thumbnail" src="../images/quiche.jpeg" alt="Quiche" />
+          <div class="row text-center">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <h4 class="product-name">Quiche</h4>
+            </div>
+            <div class="col-lg-6 col-md-6 product-price">
+              $2.50
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-3 mt-3">
+        <div class="item">
+          <img class="img-thumbnail" src="../images/cream-puff.jpeg" alt="Cream Puff" />
+          <div class="row text-center">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <h4 class="product-name">Cream Puff (Puff Pass)</h4>
+            </div>
+            <div class="col-lg-6 col-md-6 product-price">
+              $6.00
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-3 mt-3">
+        <div class="item">
+          <img class="img-thumbnail" src="../images/cinnamon-roll.jpeg" alt="Cinnamon Roll" />
+          <div class="row text-center">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <h4 class="product-name">Cannabis Cinnabong</h4>
+            </div>
+            <div class="col-lg-6 col-md-6 product-price">
+              $1.80
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-3 mt-3">
+        <div class="item">
+          <img class="img-thumbnail" src="../images/mj-mudslide.jpeg" alt="Marijuana Mudslide" />
+          <div class="row text-center">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <h4 class="product-name">Marijuana Mudslide</h4>
+            </div>
+            <div class="col-lg-6 col-md-6 product-price">
+              $7.00
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END OF COFFEE IMAGES -->
     </div>
     </div>
   </section>
