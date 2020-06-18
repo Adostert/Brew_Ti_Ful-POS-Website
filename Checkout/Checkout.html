@@ -33,15 +33,20 @@
           <h1 id="pay-select-h1">Payment Selection</h1>
 
           <form id="credit-card-form" action="">
-            <div onclick="cardFormRemove()" id="paypal-form">
-              <input id="pp-button" type="radio" name="payment" />
-              <img class="pp-button-img" src="images/paypal-logo.png" alt="paypal-logo" />
+            <div  id="paypal-form">
+              <input onclick="cardFormRemove()" id="pp-button" type="radio" name="payment" />
+              <div id="cash">
+                <label for="pp-button">CASH: </label>
+                <input for="pp-button" type="text" class="form-control" placeholder="Amount">
+            </div>
+              <!-- <img class="pp-button-img" src="images/paypal-logo.png" alt="paypal-logo" /> -->
+              
             </div>
 
             <div id="credit-card-radio">
               <input id="credit-selector" type="radio" name="payment" />
               <label for="credit-selector"></label>
-              <img class="credit-imgs" src="images/credit-card-logos.png" alt="credit-cards-img" />
+              <img class="credit-imgs" src="Checkout/images/credit-card-logos.png" alt="credit-cards-img" />
             </div>
 
             <div id="card-inputs-info">
@@ -803,6 +808,10 @@
   </div>
 
   <script src="Checkout.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="jquery.payform.min.js" charset="utf-8"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

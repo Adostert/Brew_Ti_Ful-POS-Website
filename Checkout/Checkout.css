@@ -155,10 +155,13 @@ html {
   padding-left: 25px;
 }
 
-.pp-button-img {
+#cash {
   display: flex;
+  flex-direction: row;
   padding: 10px;
-  width: 150px;
+  margin-top: 10px;
+  font-size: 25px;
+  width: 100%;
   height: auto;
 }
 
