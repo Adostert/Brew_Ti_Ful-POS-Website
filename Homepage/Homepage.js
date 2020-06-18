@@ -60,3 +60,15 @@ for (const item of menuItems) {
         openModal(e);
     })
 }
+/* -------------------------POP UP MENU---------------------------- */
+
+/* two arrays for drinks and food -> if button is clicked for food > go to food array
+condition:
+if type food 
+do...
+if type drink
+do....
+
+function create object and add to array
+
+take object data and put into checkout */
