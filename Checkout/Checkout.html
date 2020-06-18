@@ -18,7 +18,7 @@
     <div id="checkout-inside-box">
       <!--Start of Total/Subtotal Info Box -->
       <span onclick="closeCheckout()" id="open-close-bttn">&times;</span>
-  
+
       <h1 id="checkout-h1">Checkout</h1>
       <div class="pos-checkout-box">
         <div id="checkout-items"></div>
@@ -33,15 +33,20 @@
           <h1 id="pay-select-h1">Payment Selection</h1>
 
           <form id="credit-card-form" action="">
-            <div onclick="cardFormRemove()" id="paypal-form">
-              <input id="pp-button" type="radio" name="payment" />
-              <img class="pp-button-img" src="images/paypal-logo.png" alt="paypal-logo" />
+            <div  id="paypal-form">
+              <input onclick="cardFormRemove()" id="pp-button" type="radio" name="payment" />
+              <div id="cash">
+                <label for="pp-button">CASH: </label>
+                <input for="pp-button" type="text" class="form-control" placeholder="Amount">
+              </div>
+              <!-- <img class="pp-button-img" src="images/paypal-logo.png" alt="paypal-logo" /> -->
+
             </div>
 
             <div id="credit-card-radio">
               <input id="credit-selector" type="radio" name="payment" />
               <label for="credit-selector"></label>
-              <img class="credit-imgs" src="images/credit-card-logos.png" alt="credit-cards-img" />
+              <img class="credit-imgs" src="Checkout/images/credit-card-logos.png" alt="credit-cards-img" />
             </div>
 
             <div id="card-inputs-info">
@@ -442,13 +447,13 @@
             <div id="bill-address-radio">
               <form>
                 <div>
-                <input onclick="removeShipForm()" type="radio" name="ship-bill" class="ba-radio" >
-                <label class = "ba-label" for="ba-radio">Billing address is the same as shipping address</label>
-              </div>
-              <div>
-                <input onclick="displayShipForm()" type="radio" name="ship-bill" class="ba-radio" id="ship-add-radio"> 
-                <label class = "ba-label"for="ba-radio">Shipping address is different than billing address</label>
-              </div>
+                  <input onclick="removeShipForm()" type="radio" name="ship-bill" class="ba-radio" >
+                  <label class = "ba-label" for="ba-radio">Billing address is the same as shipping address</label>
+                </div>
+                <div>
+                  <input onclick="displayShipForm()" type="radio" name="ship-bill" class="ba-radio" id="ship-add-radio">
+                  <label class = "ba-label"for="ba-radio">Shipping address is different than billing address</label>
+                </div>
               </form>
             </div>
 
@@ -803,6 +808,10 @@
   </div>
 
   <script src="Checkout.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="jquery.payform.min.js" charset="utf-8"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>
