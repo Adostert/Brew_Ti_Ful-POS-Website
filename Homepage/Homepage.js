@@ -71,4 +71,15 @@ do....
 
 function create object and add to array
 
-take object data and put into checkout */
+// take object data and put into checkout */
+// ---------------------------------------------------------------
+// add to cart function 
+// name of item - string value
+// size - string value
+// add on items - array of string values
+
+// REMOVE MILK COST
+
+// // get value of everything into a variable
+// checkbox boolean (checked or not)
+// set variables to values of elements 
