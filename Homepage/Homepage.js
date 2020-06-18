@@ -12,17 +12,18 @@
 
 // quantity +/- increments
 function up(max) {
-    document.getElementById("myNumber").value = parseInt(document.getElementById("myNumber").value) + 1;
-    if (document.getElementById("myNumber").value >= parseInt(max)) {
-        document.getElementById("myNumber").value = max;
+    document.getElementById("quantity").value = parseInt(document.getElementById("quantity").value) + 1;
+    if (document.getElementById("quantity").value >= parseInt(max)) {
+        document.getElementById("quantity").value = max;
     }
 }
 function down(min) {
-    document.getElementById("myNumber").value = parseInt(document.getElementById("myNumber").value) - 1;
-    if (document.getElementById("myNumber").value <= parseInt(min)) {
-        document.getElementById("myNumber").value = min;
+    document.getElementById("quantity").value = parseInt(document.getElementById("quantity").value) - 1;
+    if (document.getElementById("quantity").value <= parseInt(min)) {
+        document.getElementById("quantity").value = min;
     }
 }
+
 
 // DRINK MODAL BOX
 // Get the modal
@@ -43,9 +44,9 @@ window.onclick = function(event) {
     if (event.target == modalDrink) {
     modalDrink.style.display = "none";
     }
-    const menuImages = event.target.attributes[1].nodeValue;
-    const newImage = document.querySelector('.item-image');
-    newImage.setAttribute('src', menuImages);
+    // const menuImages = event.target.attributes[1].nodeValue;
+    // const newImage = document.querySelector('.item-image');
+    // newImage.setAttribute('src', menuImages);
     // console.log(event.target.attributes[1].nodeValue)
 }
 
@@ -113,7 +114,37 @@ for (const item of menuItems) {
 
 
 function addToCart() {
-    
+    // get needed data
+    let size, price, milk, quantity;
+    const drinkSmall = document.getElementById('small').checked;
+    const drinkMedium = document.getElementById('medium').checked;
+    const drinkLarge = document.getElementById('large').checked;
+    if (drinkSmall) { 
+        size = 'small';
+        price = 1;
+    } else if (drinkMedium) { 
+        size = 'medium';
+        price = 2;
+    } else if (drinkLarge) { 
+        size = 'large';
+        price = 3;
+    } else { 
+        alert("Size required.");
+    }
+    quantity = document.getElementById('quantity').value;
+    const wholeMilk = document.getElementById('whole').checked;
+    const skimMilk = document.getElementById('skim').checked;
+    const veganMilk = document.getElementById('vegan').checked;
+    if (wholeMilk) { 
+        milk = 'whole milk';
+    } else if (skimMilk) { 
+        milk = 'skim milk';
+    } else if (veganMilk) { 
+        milk = 'vegan milk';
+    } else { 
+        milk = null;
+    }
+    console.log(`${size}, ${price}, ${milk}, ${quantity}`);
 }
 
 
