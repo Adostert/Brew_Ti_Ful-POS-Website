@@ -225,7 +225,7 @@ a:hover {
 \*/
 
 
-.item { 
+.item-drink, .item-food { 
     cursor: pointer;
 }
 
