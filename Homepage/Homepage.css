@@ -163,10 +163,6 @@ section {
     font-size:1.3em;
 }
 
-    .nav-link.active {
-        color: #EAB543 !important;
-        font-weight: 500;     
-    }
 .product-name{
   font-family: "Knewave";
 }
@@ -182,7 +178,7 @@ h1 {
 a p {
 	color: black;
 	margin-top: 5px;
-	font-family: 'Open Sans', sans-serif;
+	font-family: "raleway";
 }
 
 a:hover {
@@ -192,20 +188,20 @@ a:hover {
 .frame {
 	text-align: center;	
 	position: relative;
-	cursor: pointer;	
+  cursor: pointer;	
+  padding-top: 120px;
 	
 }
 .frame img {
-	width: 400px;
-	height: 400px;
+	width: 800px;
+	height: 800px;
 }
 .frame .details {
-	width: 50%;
-	height: 58%;	
-	padding: 5% 8%;
+	width: 40%;
+	height: 18%;	
 	position: absolute;
 	content: "";
-	top: 50%;
+	top: 45%;
 	left: 50%;
 	transform: translate(-50%, -50%) rotateY(90deg);
 	transform-origin: 50%;

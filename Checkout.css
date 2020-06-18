@@ -1,4 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Knewave);
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,600,800);
+* {
+  transition: 0.4s ease;
+}
 @import url(https://fonts.googleapis.com/css?family=Raleway:300);
 
 body,
@@ -78,8 +82,7 @@ html {
   box-sizing: border-box;
 }
 
-/* #payment-bill-add-box {
-} */
+
 
 #bill-ship-address {
   display: flex;
@@ -344,7 +347,17 @@ h2 {
     font-size:15px;
     
   }
-
- 
-  
 }
+
+/* -------------------------POP UP MENU---------------------------- */
+
+/* two arrays for drinks and food -> if button is clicked for food > go to food array
+condition:
+if type food 
+do...
+if type drink
+do....
+
+function create object and add to array
+
+take object data and put into checkout */
