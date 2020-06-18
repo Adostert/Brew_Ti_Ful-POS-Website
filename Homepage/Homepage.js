@@ -112,6 +112,9 @@ for (const item of menuItems) {
 // }
 
 
+function addToCart() {
+    
+}
 
 
 

@@ -80,21 +80,21 @@
               <input type="radio" id="small" name="size" value="small">
               <label for="small">Small</label>
             </div>
-            <div class="amount">$1.25</div>
+            <div class="amount">$1.00</div>
           </div>
           <div class="option-row">
             <div class="option-label">
               <input type="radio" id="medium" name="size" value="medium">
               <label for="medium">Medium</label>
             </div>
-            <div class="amount">$1.60</div>
+            <div class="amount">$2.00</div>
           </div>
           <div class="option-row">
             <div class="option-label">
               <input type="radio" id="large" name="size" value="large">
               <label for="large">Large</label>
             </div>
-            <div class="amount">$2.00</div>
+            <div class="amount">$3.00</div>
           </div>
 
         </form>
@@ -105,41 +105,23 @@
       </div>
       <div class="options">
         <form action="#">
-          <input type="checkbox" id="whole" name="milk" value="whole-milk">
+          <input type="radio" id="whole" name="milk" value="whole-milk">
           <label for="whole-milk">Whole Milk</label><br>
-          <input type="checkbox" id="skim" name="milk" value="skim-milk">
+          <input type="radio" id="skim" name="milk" value="skim-milk">
           <label for="skim-milk">Skim Milk</label><br>
 
           <div class="option-row">
             <div class="option-label">
-              <input type="checkbox" id="almond" name="milk" value="almond-milk">
+              <input type="radio" id="almond" name="milk" value="almond-milk">
               <label for="almond-milk">Almond Milk</label>
             </div>
-            <div class="amount">+$0.50</div>
           </div>
           <div class="option-row">
             <div class="option-label">
-              <input type="checkbox" id="oat" name="milk" value="oat-milk">
+              <input type="radio" id="oat" name="milk" value="oat-milk">
               <label for="oat-milk">Oat Milk</label>
             </div>
-            <div class="amount">+$0.50</div>
           </div>
-        </form>
-      </div>
-
-      <div class="category">
-        <p class="category-header">Sweetener</p>
-      </div>
-      <div class="options">
-        <form action="#">
-          <input type="checkbox" id="sugar" name="sweetener" value="sugar">
-          <label for="sugar">Sugar</label><br>
-          <input type="checkbox" id="sugar-in-the-raw" name="sweetener" value="sugar in the raw">
-          <label for="sugar in the raw">Sugar in the Raw</label><br>
-          <input type="checkbox" id="stevia" name="sweetener" value="stevia">
-          <label for="stevia">Stevia</label><br>
-          <input type="checkbox" id="honey" name="sweetener" value="honey">
-          <label for="honey">Honey</label><br>
         </form>
       </div>
 
@@ -163,9 +145,8 @@
 
       </div>
 
-      <button class="add-button">
+      <button class="add-button" onclick="addToCart()">
         <div class="add-cart">Add to cart</div>
-        <div class="add-total">Total</div>
       </button>
 
     </div>
