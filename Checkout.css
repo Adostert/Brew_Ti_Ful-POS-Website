@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Knewave);
-@import url(https://fonts.googleapis.com/css?family=Raleway:300, 600, 800);
+@import url(https://fonts.googleapis.com/css?family=Raleway:300);
 
 body,
 html {
@@ -7,28 +7,26 @@ html {
   padding: 0;
 }
 
-/* .checkout-main-box {
 
-    display: flex;
-    font-family: Knewave;
-    
-    width: 100%;
-    height: 100%;
-    border: 1px solid black;
-    justify-content: center;
-    align-items: center;
-
-
-} */
-
-#exit-out-checkout {
-
+#open-close-bttn {
   display:flex;
-  flex-direction: row-reverse;
-  box-sizing: border-box;
-  width: 100%;
-  margin: 5px;
+  justify-content: flex-end;
+  color: #aaaaaa;
+  height: auto;
+  width:100%;
+  margin:0;
+  padding: 0;
+  font-size: 20px;
+  font-weight: bold;
   
+
+}
+
+#open-close-bttn:hover,
+#open-close-bttn:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 #background-shadow {
@@ -46,17 +44,20 @@ html {
 #checkout-inside-box {
   display: flex;
   flex-direction: column;
-  padding: 5px;
+  padding: 0 5px 5px 5px;
+  margin-top: 0;
   align-items: center;
   width: 100%;
   height: 100%;
   background-color: white;
   box-sizing: border-box;
+  border-radius: 10px;
 }
 .pos-checkout-box {
   display: flex;
   flex-direction: column;
   width: 100%;
+  height: auto;
   /* display: flex;
     justify-content: center;
     align-items: center;
@@ -65,6 +66,18 @@ html {
     width: 100%;
     height: 100%; */
 }
+
+#bill-address-form-div {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  /* padding-top:25px; */
+  padding: 25px 20px 0 20px;
+  box-sizing: border-box;
+}
+
 #payment-bill-add-box {
 }
 
@@ -72,7 +85,16 @@ html {
   display: flex;
   flex-direction: column;
   width: 100%;
+  height: auto;
   margin-bottom: 20px;
+}
+
+#shipping-add-form-div {
+
+  display: none;
+  flex-direction: column;
+  padding: 15px;
+ 
 }
 
 #credit-card-form {
@@ -91,24 +113,13 @@ html {
   /* Enter display properties */
 }
 
-/* #submit-button {
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    width: 100px;
-    height: 35px;
-
-} */
-
 #checkout-items {
   display: flex;
   background-color: #a0c7b4;
   width: 100%;
   height: 150px;
   box-sizing: border-box;
+  border-radius: 5px;
 }
 
 #subtotal-price {
@@ -117,6 +128,7 @@ html {
   width: 100%;
   height: 150px;
   box-sizing: border-box;
+  border-radius: 5px;
 }
 
 #total-price {
@@ -124,6 +136,7 @@ html {
   width: 100%;
   height: 150px;
   box-sizing: border-box;
+  border-radius: 5px;
 }
 
 #credit-card-radio {
@@ -131,6 +144,7 @@ html {
   flex-direction: row;
   justify-content: left;
   align-items: center;
+  padding-left:25px;
 }
 
 #paypal-form {
@@ -138,18 +152,19 @@ html {
   flex-direction: row;
   justify-content: left;
   align-items: center;
+  padding-left: 25px;
 }
 
 .pp-button-img {
   display: flex;
   padding: 10px;
   width: 150px;
-  height: 50px;
+  height: auto;
 }
 
 .credit-imgs {
   display: flex;
-  height: 50px;
+  height: auto;
   width: 250px;
   padding: 10px;
 }
@@ -163,9 +178,7 @@ html {
   width: 100%;
   text-decoration: none;
   color: white;
-  font-family: Raleway;
-  font-weight: 900;
-  font-size: 15px;
+  font-size: 24px;
 }
 
 #revise-order-button {
@@ -186,7 +199,8 @@ h2 {
 }
 
 #pay-select-h1 {
-  margin: 20px 0 0 0;
+  margin: 40px 0 40px 0;
+  width: 100%;
   border-bottom: solid 7px rgba(195, 18, 77, 0.7);
 }
 
@@ -197,43 +211,71 @@ h2 {
 
 #bill-add-h1 {
   border-bottom: solid 7px rgba(195, 18, 77, 0.7);
+  margin: 40px 0 0 0;
 }
+
+#ship-add-h1 {
+  display:none;
+
+  justify-content: center;
+  border-bottom: solid 7px rgba(195, 18, 77, 0.7);
+  margin: 40px 0 0 0;
+}
+
+#bill-address-radio {
+
+  display:flex;
+  flex-direction: column;
+  width: 100%;
+  padding:10px;
+}
+
+/* .ba-label {
+  width: 70%;
+  
+  padding-left: 10px;
+}
+
+.ba-radio{
+
+  width: 20%;
+}
+ */
+
+
 
 @media screen and (min-width: 770px) {
   #checkout-inside-box {
     width: 80%;
     height: 80%;
   }
+
+  #pos-checkout-box {
+  
+  }
+
   #payment-bill-add-box {
     display: flex;
+    width: 100%;
+   
     flex-direction: row;
     justify-content: space-between;
+    box-sizing: border-box;
   }
 
   .pos-payment-info-box {
     display: flex;
     width: 100%;
-    height: 100%;
+    height: auto;
     flex-direction: column;
     justify-content: left;
     align-items: center;
+    margin-right:5px;
   }
 
   #bill-ship-address {
+
   }
-
-  /* #credit-card-radio {
-
-
-        flex-direction: column;
-
-    }
-
-    #paypal-form {
-
-        flex-direction: column;
-
-    } */
 
   #card-inputs-info {
     display: none;
@@ -241,16 +283,11 @@ h2 {
     /* Enter display properties */
   }
 
-  /* input {
-        margin-top: 5px;
-        height: 25px;
-
-
-    } */
 
   #revise-order-button {
     display: flex;
-    width: 30%;
+    width: auto;
+    height:auto
     margin-bottom: 30px;
   }
 
@@ -260,4 +297,51 @@ h2 {
     width: 100%;
     text-decoration: none;
   }
+
+  #billing-add{
+
+    display:flex;
+  
+    flex-direction: column;
+  }
+
+  #bill-add-h1 {
+   
+    margin-bottom: 0;
+  }
+  
+  #pay-select-h1 {
+    margin: 40px 0 20px 0;
+    
+  }
+
+  #bill-address-form-div {
+    
+    padding-top:25px;
+    padding: 0;
+   
+  }
+
+  #bill-address-form {
+
+    width: 100%;
+    padding:30px;
+  }
+
+  #ship-add-h1 {
+    
+  
+    margin: 0 0 0 0;
+  }
+
+  #bill-address-radio {
+
+    
+   
+    font-size:15px;
+    
+  }
+
+ 
+  
 }
