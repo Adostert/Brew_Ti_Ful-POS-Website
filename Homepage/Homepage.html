@@ -10,6 +10,7 @@
 </head>
 
 <body>
+  <div id = "product-page">
   <header id="header" class="d-flex align-items-center scroll-Active" style="display: none">
     <nav class="navbar navbar-expand-lg navbar-dark  fixed-top" style="background-color:white" id="nav-bar">
       <div class="container-fluid">
@@ -28,7 +29,7 @@
                   style="font-size:1.5em"></i> <span class="hidden-sm-down">Product </span></a>
             </li>
             <li class="nav-item pl-2 pr-2">
-              <div class="icon-cart" style="float: left">
+              <div onclick="checkoutPopUp()" class="icon-cart" style="float: left">
                 <div class="cart-line-1" style="background-color: #D37ABC"></div>
                 <div class="cart-line-2" style="background-color: #D37ABC"></div>
                 <div class="cart-line-3" style="background-color: #D37ABC"></div>
@@ -337,7 +338,7 @@
     </div>
   </section>
   </div>
-
+</div>
 
   <script src="Homepage.js"></script>
   <script src="tanita.js"></script>
