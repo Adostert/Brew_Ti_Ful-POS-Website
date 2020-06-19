@@ -19,7 +19,16 @@ body {
     height: 48px;
     position: relative;
     margin-left: 25px;
+    cursor: pointer;
   }
+  .icon-cart:hover {
+    width: 58px;
+    height: 58px;
+    position: relative;
+    margin-left: 25px;
+    cursor: pointer;
+  }
+  
   
   .icon-cart .cart-line-1 {
     width: 15%;
@@ -195,7 +204,6 @@ a:hover {
 .frame {
 	text-align: center;	
 	position: sticky;
-  cursor: pointer;	
   padding-top: 120px;
 	
 }
@@ -320,7 +328,7 @@ a:hover {
   box-sizing: border-box;
   padding: 20px;
   width: 100%;
-  height: 100%;
+  height: auto;
   background-color: rgba(0, 0, 0, 0.7);
 }
 
@@ -504,7 +512,7 @@ h2 {
 @media screen and (min-width: 770px) {
   #checkout-inside-box {
     width: 80%;
-    height: 80%;
+    height: auto;
   }
 
 
