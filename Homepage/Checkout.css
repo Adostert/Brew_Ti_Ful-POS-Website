@@ -30,7 +30,7 @@ html {
 }
 
 #background-shadow {
-  display: none;
+  display: flex;
   margin: 0;
   justify-content: center;
   align-items: center;
@@ -94,23 +94,10 @@ html {
   display: none;
   flex-direction: column;
   padding: 15px;
- 
-}
-
-#credit-card-form {
-  /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 10px;
-    box-sizing: border-box;
-    width: 100%;
-    height: 100vh; */
 }
 
 #card-inputs-info {
   display: none;
-
-  /* Enter display properties */
 }
 
 #checkout-items {
@@ -233,34 +220,15 @@ h2 {
   padding:10px;
 }
 
-/* .ba-label {
-  width: 70%;
-  
-  padding-left: 10px;
-}
-
-.ba-radio{
-
-  width: 20%;
-}
- */
-
-
-
 @media screen and (min-width: 770px) {
   #checkout-inside-box {
     width: 80%;
     height: 80%;
   }
 
-  #pos-checkout-box {
-  
-  }
-
   #payment-bill-add-box {
     display: flex;
     width: 100%;
-   
     flex-direction: row;
     justify-content: space-between;
     box-sizing: border-box;
@@ -290,7 +258,7 @@ h2 {
   #revise-order-button {
     display: flex;
     width: auto;
-    height:auto
+    height:auto;
     margin-bottom: 30px;
   }
 
@@ -309,7 +277,6 @@ h2 {
   }
 
   #bill-add-h1 {
-   
     margin-bottom: 0;
   }
   
@@ -322,7 +289,6 @@ h2 {
     
     padding-top:25px;
     padding: 0;
-   
   }
 
   #bill-address-form {
@@ -332,19 +298,14 @@ h2 {
   }
 
   #ship-add-h1 {
-    
-  
+
     margin: 0 0 0 0;
   }
 
   #bill-address-radio {
 
-    
-   
     font-size:15px;
     
   }
-
- 
   
 }
