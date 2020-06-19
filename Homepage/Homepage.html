@@ -67,9 +67,18 @@
           <span class="close">&times;</span>
         </div>
 
-        <div class="image-container">
-          <div class="popup-image">
-            <img src="../images/coffe.jpeg" alt="Coffee" class="item-image">
+      <div class="category">
+        <p class="category-header">Size</p>
+        <p class="required">Required</p>
+      </div>
+      <div class="options">
+        <form action="#">
+          <div class="option-row">
+            <div class="option-label">
+              <input type="radio" id="small" name="size" value="small">
+              <label for="small">Small</label>
+            </div>
+            <div class="amount">$1.00</div>
           </div>
         </div>
 
@@ -86,67 +95,38 @@
               </div>
               <div class="amount">$1.25</div>
             </div>
-            <div class="option-row">
-              <div class="option-label">
-                <input type="radio" id="medium" name="size" value="medium">
-                <label for="medium">Medium</label>
-              </div>
-              <div class="amount">$1.60</div>
+            <div class="amount">$2.00</div>
+          </div>
+          <div class="option-row">
+            <div class="option-label">
+              <input type="radio" id="large" name="size" value="large">
+              <label for="large">Large</label>
             </div>
-            <div class="option-row">
-              <div class="option-label">
-                <input type="radio" id="large" name="size" value="large">
-                <label for="large">Large</label>
-              </div>
-              <div class="amount">$2.00</div>
-            </div>
+            <div class="amount">$3.00</div>
+          </div>
 
           </form>
         </div>
 
-        <div class="category">
-          <p class="category-header">Milk</p>
-        </div>
-        <div class="options">
-          <form action="#">
-            <!-- CHANGE TO RADIO BUTTONS FOR MILK -->
-            <input type="checkbox" id="whole" name="milk" value="whole-milk">
-            <label for="whole-milk">Whole Milk</label><br>
-            <input type="checkbox" id="skim" name="milk" value="skim-milk">
-            <label for="skim-milk">Skim Milk</label><br>
+      <div class="category">
+        <p class="category-header">Milk</p>
+      </div>
+      <div class="options">
+        <form action="#">
+          <input type="radio" id="whole" name="milk" value="whole-milk">
+          <label for="whole-milk">Whole Milk</label><br>
+          <input type="radio" id="skim" name="milk" value="skim-milk">
+          <label for="skim-milk">Skim Milk</label><br>
 
-            <div class="option-row">
-              <div class="option-label">
-                <input type="checkbox" id="almond" name="milk" value="almond-milk">
-                <label for="almond-milk">Almond Milk</label>
-              </div>
-              <div class="amount">+$0.50</div>
+          <div class="option-row">
+            <div class="option-label">
+              <input type="radio" id="vegan" name="milk" value="vegan-milk">
+              <label for="vegan-milk">Vegan Milk</label>
             </div>
-            <div class="option-row">
-              <div class="option-label">
-                <input type="checkbox" id="oat" name="milk" value="oat-milk">
-                <label for="oat-milk">Oat Milk</label>
-              </div>
-              <div class="amount">+$0.50</div>
-            </div>
-          </form>
-        </div>
-
-        <div class="category">
-          <p class="category-header">Sweetener</p>
-        </div>
-        <div class="options">
-          <form action="#">
-            <input type="checkbox" id="sugar" name="sweetener" value="sugar">
-            <label for="sugar">Sugar</label><br>
-            <input type="checkbox" id="sugar-in-the-raw" name="sweetener" value="sugar in the raw">
-            <label for="sugar in the raw">Sugar in the Raw</label><br>
-            <input type="checkbox" id="stevia" name="sweetener" value="stevia">
-            <label for="stevia">Stevia</label><br>
-            <input type="checkbox" id="honey" name="sweetener" value="honey">
-            <label for="honey">Honey</label><br>
-          </form>
-        </div>
+          </div>
+          
+        </form>
+      </div>
 
         <div class="quantity-container">
           <div class="form-group">
@@ -154,14 +134,9 @@
               <div class="category">
                 <p class="category-header">Quantity</p>
               </div>
-              <div class="input-group">
-                <div class="input-group-btn">
-                  <button id="down" class="btn btn-default" onclick=" down('0')"> - </button>
-                </div>
-                <input type="text" id="myNumber" class="form-control input-number" value="1" />
-                <div class="input-group-btn">
-                  <button id="up" class="btn btn-default" onclick="up('10')">+ </button>
-                </div>
+              <input type="text" id="quantity" class="form-control input-number" value="1" />
+              <div class="input-group-btn">
+                <button id="up" class="btn btn-default" onclick="up('10')">+ </button>
               </div>
             </div>
           </div>
@@ -173,7 +148,9 @@
           <div class="add-total">Total</div>
         </button>
 
-      </div>
+      <button class="add-button" onclick="addToCart()">
+        <div class="add-cart">Add to cart</div>
+      </button>
 
     </div>
 
