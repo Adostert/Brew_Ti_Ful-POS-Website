@@ -221,3 +221,27 @@ function removeShipForm(){
 
 }
 
+let subBttn = document.getElementById("pay-now");
+
+subBttn.addEventListener("click", (e) => {
+    let amexCardNum = /^(?:3[47][0-9]{13})$/;
+    let masterCardNum = /^(?:5[1-5][0-9]{14})$/;
+    let discoverCardNum = /^(?:6(?:011|5[0-9][0-9])[0-9]{12})$/;
+    let visaCardNum = /^(?:3[47][0-9]{13})$/;
+
+    let cardNumber = document.getElementById("cardNumber").value;
+    console.log(cardNumber);
+
+    
+        if (cardNumber.length < amexCardNum.length || cardNumber.length < masterCardNum.length || cardNumber.length < discoverCardNum.length || cardNumber.length < visaCardNum.length) {
+            return true;
+        }
+        else if (cardNumber = null) {
+            alert("Please enter a credit card number!")
+            return false;
+        }
+        else {
+            alert("Not a valid credit card number!");
+    }
+
+});
