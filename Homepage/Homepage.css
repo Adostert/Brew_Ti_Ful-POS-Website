@@ -6,7 +6,7 @@
 html,
 body {
     height: 100%;
-    overflow-x: hidden;
+    
 }
 
 #product-page {
@@ -124,6 +124,8 @@ body {
     height: 70%;
     background-color: #A0C7B4;
     background-size: cover;
+    position: static;
+
 }
 /* container for the items */
 section {
@@ -167,17 +169,17 @@ section {
     font-weight: 800;
     font-size:1.3em;
 }
-
+.nav-link:hover {
+  color: pink !important;
+  font-weight: 800;
+  font-size:1.3em;
+}
 .product-name{
   font-family: "Knewave";
 }
 .logo:hover {
     transform: translateX(-10%) scale(1.2);
   }
-h1 {
-	font-family: "Knewave";
-	text-transform: uppercase;
-}
 
 
 a p {
@@ -192,7 +194,7 @@ a:hover {
 
 .frame {
 	text-align: center;	
-	position: relative;
+	position: sticky;
   cursor: pointer;	
   padding-top: 120px;
 	
