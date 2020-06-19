@@ -30,7 +30,7 @@ html {
 }
 
 #background-shadow {
-  display: flex;
+  display: none;
   margin: 0;
   justify-content: center;
   align-items: center;
