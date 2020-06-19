@@ -1,4 +1,13 @@
 
+
+function checkoutPopUp(){
+
+    const proPage = document.getElementById("product-page");
+    const checkOut = document.getElementById("background-shadow");
+
+    checkOut.style.display = "flex";
+    proPage.style.display = "none"
+}
 // open and close popup
 // let popupDiv = document.getElementById("popup-bg");
 
