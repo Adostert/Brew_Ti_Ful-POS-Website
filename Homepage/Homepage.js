@@ -129,6 +129,7 @@ function addToCart() {
     document.getElementById('medium').checked = false;
     document.getElementById('large').checked = false;
     document.getElementById('quantity').value = 1;
+    modalDrink.style.display = "none";
 }
 
 
@@ -171,9 +172,8 @@ function cardFormRemove() {
 
 function closeCheckout() {
 
-  let bgShadow = document.getElementById("background-shadow")
-
-  bgShadow.style.display = "none";
+  document.getElementById("background-shadow").style.display = "none";
+  document.getElementById("product-page").style.display = "block";
 
 };
 
