@@ -299,6 +299,7 @@ a:hover {
 }
 
 
+
 #open-close-bttn {
   display:flex;
   justify-content: flex-end;
@@ -710,5 +711,7 @@ h2 {
       text-align: left;
   }
 }
+
+
 
 
