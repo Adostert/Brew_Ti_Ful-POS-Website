@@ -1,7 +1,7 @@
 let subTotal = 0;
 let taxes = 0;
 let total = 0;
-const selectProducts 
+// const selectProducts 
 
 function checkoutPopUp(){
 
@@ -61,6 +61,7 @@ function openModal(event) {
 
 // gets all item class
 const menuItems = document.getElementsByClassName('item-drink');
+console.log(menuItems);
 // [htmlElement, htmlElement, ...]
 
 // adds event listener on click to open modal
@@ -68,6 +69,7 @@ for (const item of menuItems) {
     item.addEventListener('click', (e) => {
         openModal(e);
     })
+    console.log("HELLOOOOOO")
 }
 //FUNCTION FOR THE ADD TO CART POP UP
 function addToCart() {
