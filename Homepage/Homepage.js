@@ -104,7 +104,29 @@ function addToCart() {
         milk = null;
     }
     console.log(`${size}, ${price}, ${milk}, ${quantity}`);
+    
+    subTotal += price * quantity;
+    taxes = subTotal * .06;
+    total = subTotal + taxes;
+
+    document.getElementById("subtotal-price").innerText = `$  ${subTotal}`;
+    document.getElementById("total-price").innerText = `Taxes: $ ${taxes} \n Total: $ ${total}`;
+
+    //PRODUCT NAME x QUANTITY  = $ PRICE
+    
+    let productListItemElement = document.createElement("li");
+    productListItemElement.innerText = `Coffee x ${quantity} = $ ${price * quantity}  `;
+    document.getElementById("checkout-item-list").appendChild(productListItemElement);
+    //RESET FORM
+    document.getElementById('whole').checked = false;
+    document.getElementById('skim').checked = false;
+    document.getElementById('vegan').checked = false;
+    document.getElementById('small').checked = false;
+    document.getElementById('medium').checked = false;
+    document.getElementById('large').checked = false;
+    document.getElementById('quantity').value = 1;
 }
+
 
 
 // CHECKOUT CSS
