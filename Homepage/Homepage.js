@@ -1,6 +1,7 @@
 let subTotal = 0;
 let taxes = 0;
 let total = 0;
+let productInfo = '';
 // const selectProducts 
 
 function checkoutPopUp(){
@@ -111,6 +112,7 @@ function addToCart() {
 
     document.getElementById("subtotal-price").innerText = `$  ${subTotal}`;
     document.getElementById("total-price").innerText = `Taxes: $ ${taxes} \n Total: $ ${total}`;
+    document.getElementsByClassName("product-name").innerText = `Items: ${productInfo}`;
 
     //PRODUCT NAME x QUANTITY  = $ PRICE
     
