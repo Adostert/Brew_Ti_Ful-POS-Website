@@ -19,7 +19,16 @@ body {
     height: 48px;
     position: relative;
     margin-left: 25px;
+    cursor: pointer;
   }
+  .icon-cart:hover {
+    width: 58px;
+    height: 58px;
+    position: relative;
+    margin-left: 25px;
+    cursor: pointer;
+  }
+  
   
   .icon-cart .cart-line-1 {
     width: 15%;
@@ -195,7 +204,6 @@ a:hover {
 .frame {
 	text-align: center;	
 	position: sticky;
-  cursor: pointer;	
   padding-top: 120px;
 	
 }
@@ -289,5 +297,421 @@ a:hover {
         display: none !important;
     }
 }
+
+
+
+#open-close-bttn {
+  display:flex;
+  justify-content: flex-end;
+  color: #aaaaaa;
+  height: auto;
+  width:100%;
+  margin:0;
+  padding: 0;
+  font-size: 20px;
+  font-weight: bold;
+  
+
+}
+
+#open-close-bttn:hover,
+#open-close-bttn:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#background-shadow {
+  display: none;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 20px;
+  width: 100%;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+#checkout-inside-box {
+  display: flex;
+  flex-direction: column;
+  padding: 0 5px 5px 5px;
+  margin-top: 0;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+.pos-checkout-box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+
+}
+
+#bill-address-form-div {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  /* padding-top:25px; */
+  padding: 25px 20px 0 20px;
+  box-sizing: border-box;
+}
+
+
+#bill-ship-address {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+#shipping-add-form-div {
+
+  display: none;
+  flex-direction: column;
+  padding: 15px;
+ 
+}
+
+
+#card-inputs-info {
+  display: none;
+
+}
+
+#checkout-items {
+  display: flex;
+  background-color: #a0c7b4;
+  width: 100%;
+  height: 150px;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+#subtotal-price {
+  display: flex;
+  background-color: #a0c7b4;
+  width: 100%;
+  height: 150px;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+#total-price {
+  background-color: #a0c7b4;
+  width: 100%;
+  height: 150px;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+#credit-card-radio {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  padding-left:25px;
+}
+
+#paypal-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  padding-left: 25px;
+}
+
+#cash {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 25px;
+  width: 100%;
+  height: auto;
+}
+
+.credit-imgs {
+  display: flex;
+  height: auto;
+  width: 250px;
+  padding: 10px;
+}
+
+#revise-order-link {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  box-sizing: border-box;
+  padding: 10px;
+  width: 100%;
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+}
+
+#revise-order-button {
+  width: 70%;
+  background-color: rgb(0, 128, 128);
+  border: none;
+  margin-bottom: 20px;
+}
+
+h1 {
+  text-align: center;
+  font-family: Knewave;
+}
+
+h2 {
+  text-align: center;
+  font-family: Knewave;
+}
+
+#pay-select-h1 {
+  margin: 40px 0 40px 0;
+  width: 100%;
+  border-bottom: solid 7px rgba(195, 18, 77, 0.7);
+}
+
+#checkout-h1 {
+  width: 100%;
+  border-bottom: solid 7px rgba(195, 18, 77, 0.7);
+}
+
+#bill-add-h1 {
+  border-bottom: solid 7px rgba(195, 18, 77, 0.7);
+  margin: 40px 0 0 0;
+}
+
+#ship-add-h1 {
+  display:none;
+
+  justify-content: center;
+  border-bottom: solid 7px rgba(195, 18, 77, 0.7);
+  margin: 40px 0 0 0;
+}
+
+#bill-address-radio {
+
+  display:flex;
+  flex-direction: column;
+  width: 100%;
+  padding:10px;
+}
+
+
+
+
+@media screen and (min-width: 770px) {
+  #checkout-inside-box {
+    width: 80%;
+    height: auto;
+  }
+
+
+  #payment-bill-add-box {
+    display: flex;
+    width: 100%;
+   
+    flex-direction: row;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+
+  .pos-payment-info-box {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+    margin-right:5px;
+  }
+
+
+  #card-inputs-info {
+    display: none;
+
+    /* Enter display properties */
+  }
+
+
+  #revise-order-button {
+    display: flex;
+    width: auto;
+    height:auto;
+    margin-bottom: 30px;
+  }
+
+  #revise-order-link {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-decoration: none;
+  }
+
+  #billing-add{
+
+    display:flex;
+  
+    flex-direction: column;
+  }
+
+  #bill-add-h1 {
+  
+    margin-bottom: 0;
+  }
+  
+  #pay-select-h1 {
+    margin: 40px 0 20px 0;
+    
+  }
+
+  #bill-address-form-div {
+    
+    padding-top:25px;
+    padding: 0;
+  
+  }
+
+  #bill-address-form {
+
+    width: 100%;
+    padding:30px;
+  }
+
+  #ship-add-h1 {
+    
+  
+    margin: 0 0 0 0;
+  }
+
+  #bill-address-radio {
+    font-size:15px;
+    
+  }  
+}
+
+.creditCardForm {
+  display:flex;
+  flex-direction:column;
+  /* max-width: 700px; */
+  background-color: #fff;
+  /* margin: 100px auto; */
+  /* overflow: hidden; */
+  /* padding: 25px; */
+  color: #4c4e56;
+}
+
+.creditCardForm label {
+  width: 100%;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.creditCardForm .heading h1 {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  color: #4c4e56;
+}
+
+.creditCardForm .payment {
+  float: left;
+  font-size: 18px;
+  padding: 10px 25px;
+  margin-top: 20px;
+  position: relative;
+}
+
+.creditCardForm .payment .form-group {
+  float: left;
+  margin-bottom: 10px;
+}
+
+.creditCardForm .payment .form-control {
+  line-height: 40px;
+  height: auto;
+  padding: 0 16px;
+  width: 100%;
+}
+
+.creditCardForm .owner {
+  width: 63%;
+  margin-right: 10px;
+}
+
+.creditCardForm .CVV {
+  width: 35%;
+}
+
+.creditCardForm #card-number-field {
+  width: 100%;
+}
+
+.creditCardForm #expiration-date {
+  width: 49%;
+}
+
+.creditCardForm #credit_cards {
+  width: 50%;
+  margin-top: 25px;
+  text-align: right;
+}
+
+.creditCardForm #pay-now {
+  width: 100%;
+  margin-top: 25px;
+}
+
+.creditCardForm .payment .btn  {
+  width: 100%;
+  margin-top: 3px;
+  font-size: 24px;
+  background-color: rgb(0, 128, 128);
+  color: white;
+}
+
+.creditCardForm .payment select {
+  padding: 10px;
+  margin-right: 15px;
+}
+
+.transparent {
+  opacity: 0.2;
+}
+
+#confirm-bill-add-button {
+
+  width: 100%;
+  height: 45px;
+  font-size: 24px;
+  color: white;
+  margin-top: 25px;
+  background-color: rgb(0, 128, 128);
+  border: none;
+  border-radius: 5px;
+}
+
+@media(max-width: 650px) {
+  .creditCardForm .owner,
+  .creditCardForm .CVV,
+  .creditCardForm #expiration-date,
+  .creditCardForm #credit_cards {
+      width: 100%;
+  }
+  .creditCardForm #credit_cards {
+      text-align: left;
+  }
+}
+
+
 
 
