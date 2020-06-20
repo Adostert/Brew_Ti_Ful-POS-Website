@@ -2,6 +2,8 @@ let subTotal = 0;
 let taxes = 0;
 let total = 0;
 let productInfo = '';
+let productTitle = '';
+let imageSource = '';
 // const selectProducts 
 
 function checkoutPopUp(){
@@ -28,18 +30,22 @@ function down(min) {
 }
 
 
-// DRINK MODAL BOX
-// Get the modal
-const modalDrink = document.getElementById("myModal-drink");
-
+// modal popup box
+// get modal
+const modalDrink = document.getElementById("myModal");
 
 // Get the <span> element that closes the modal
 const span = document.getElementsByClassName("close")[0];
 
+// get item class
+const menuItems = document.getElementsByClassName('item');
+console.log(menuItems);
+// [htmlElement, htmlElement, ...]
+
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
     modalDrink.style.display = "none";
-    modalFood.style.display = "none";
+    // modalFood.style.display = "none";
 }
 
 // When the user clicks anywhere outside of the modal, close it
@@ -53,25 +59,21 @@ window.onclick = function(event) {
     // console.log(event.target.attributes[1].nodeValue)
 }
 
-const navBar = document.getElementById('nav-bar');
-const popupMenu = document.getElementById('custom-popup-menu');
-
 function openModal(event) { 
     modalDrink.style.display = "flex";
 }
-
-// gets all item class
-const menuItems = document.getElementsByClassName('item-drink');
-console.log(menuItems);
-// [htmlElement, htmlElement, ...]
 
 // adds event listener on click to open modal
 for (const item of menuItems) {
     item.addEventListener('click', (e) => {
         openModal(e);
+        productTitle = e.target.alt;
+        imageSource = e.target.src;
+        document.getElementById('popupImage').setAttribute('alt', productTitle);
+        document.getElementById('popupImage').setAttribute('src', imageSource);
     })
-    console.log("HELLOOOOOO")
 }
+
 //FUNCTION FOR THE ADD TO CART POP UP
 function addToCart() {
     // get needed data
