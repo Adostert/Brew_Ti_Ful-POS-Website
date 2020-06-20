@@ -1,4 +1,10 @@
-
+let subTotal = 0;
+let taxes = 0;
+let total = 0;
+let productInfo = '';
+let productTitle = '';
+let imageSource = '';
+// const selectProducts 
 
 function checkoutPopUp(){
 
@@ -8,16 +14,6 @@ function checkoutPopUp(){
     checkOut.style.display = "flex";
     proPage.style.display = "none"
 }
-// open and close popup
-// let popupDiv = document.getElementById("popup-bg");
-
-// function openPopupMenu() {
-//     popupDiv.style.display = "block";
-// }
-
-// function closePopupMenu() { 
-//     popupDiv.style.display = "none";
-// }
 
 // quantity +/- increments
 function up(max) {
@@ -34,18 +30,22 @@ function down(min) {
 }
 
 
-// DRINK MODAL BOX
-// Get the modal
-const modalDrink = document.getElementById("myModal-drink");
-
+// modal popup box
+// get modal
+const modalDrink = document.getElementById("myModal");
 
 // Get the <span> element that closes the modal
 const span = document.getElementsByClassName("close")[0];
 
+// get item class
+const menuItems = document.getElementsByClassName('item');
+console.log(menuItems);
+// [htmlElement, htmlElement, ...]
+
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
     modalDrink.style.display = "none";
-    modalFood.style.display = "none";
+    // modalFood.style.display = "none";
 }
 
 // When the user clicks anywhere outside of the modal, close it
@@ -59,69 +59,22 @@ window.onclick = function(event) {
     // console.log(event.target.attributes[1].nodeValue)
 }
 
-const navBar = document.getElementById('nav-bar');
-const popupMenu = document.getElementById('custom-popup-menu');
-
 function openModal(event) { 
     modalDrink.style.display = "flex";
 }
-
-// gets all item class
-const menuItems = document.getElementsByClassName('item-drink');
-// [htmlElement, htmlElement, ...]
 
 // adds event listener on click to open modal
 for (const item of menuItems) {
     item.addEventListener('click', (e) => {
         openModal(e);
+        productTitle = e.target.alt;
+        imageSource = e.target.src;
+        document.getElementById('popupImage').setAttribute('alt', productTitle);
+        document.getElementById('popupImage').setAttribute('src', imageSource);
     })
 }
 
-
-
-// // FOOD MODAL BOX
-// // Get the modal
-// const modalFood = document.getElementById("myModal-food");
-
-
-// // Get the <span> element that closes the modal
-// const span = document.getElementsByClassName("close")[0];
-
-// // When the user clicks on <span> (x), close the modal
-// span.onclick = function() {
-//     modalFood.style.display = "none";
-// }
-
-// // When the user clicks anywhere outside of the modal, close it
-// window.onclick = function(event) {
-//     if (event.target == modalFood) {
-//     modalFood.style.display = "none";
-//     }
-//     const menuImages = event.target.attributes[1].nodeValue;
-//     const newImage = document.querySelector('.item-image');
-//     newImage.setAttribute('src', menuImages);
-//     // console.log(event.target.attributes[1].nodeValue)
-// }
-
-// const navBar = document.getElementById('nav-bar');
-// const popupMenu = document.getElementById('custom-popup-menu');
-
-// function openModal(event) { 
-//     modalFood.style.display = "flex";
-// }
-
-// // gets all item class
-// const menuItems = document.getElementsByClassName('item-food');
-// // [htmlElement, htmlElement, ...]
-
-// // adds event listener on click to open modal
-// for (const item of menuItems) {
-//     item.addEventListener('click', (e) => {
-//         openModal(e);
-//     })
-// }
-
-
+//FUNCTION FOR THE ADD TO CART POP UP
 function addToCart() {
     // get needed data
     let size, price, milk, quantity;
@@ -154,7 +107,30 @@ function addToCart() {
         milk = null;
     }
     console.log(`${size}, ${price}, ${milk}, ${quantity}`);
+    
+    subTotal += price * quantity;
+    taxes = subTotal * .06;
+    total = subTotal + taxes;
+
+    document.getElementById("subtotal-price").innerText = `$  ${subTotal}`;
+    document.getElementById("total-price").innerText = `Taxes: $ ${taxes} \n Total: $ ${total}`;
+    document.getElementsByClassName("product-name").innerText = `Items: ${productInfo}`;
+
+    //PRODUCT NAME x QUANTITY  = $ PRICE
+    
+    let productListItemElement = document.createElement("li");
+    productListItemElement.innerText = `Coffee x ${quantity} = $ ${price * quantity}  `;
+    document.getElementById("checkout-item-list").appendChild(productListItemElement);
+    //RESET FORM
+    document.getElementById('whole').checked = false;
+    document.getElementById('skim').checked = false;
+    document.getElementById('vegan').checked = false;
+    document.getElementById('small').checked = false;
+    document.getElementById('medium').checked = false;
+    document.getElementById('large').checked = false;
+    document.getElementById('quantity').value = 1;
 }
+
 
 
 // CHECKOUT CSS
