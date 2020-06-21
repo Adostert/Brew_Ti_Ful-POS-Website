@@ -336,7 +336,7 @@
         <h1 id="pay-select-h1">Payment Selection</h1>
 
         <form id="credit-card-form" action="">
-          <div  id="paypal-form">
+          <div id="paypal-form">
             <input onclick="cardFormRemove()" id="pp-button" type="radio" name="payment" />
             <div id="cash">
               <label for="pp-button">CASH: </label>
@@ -361,15 +361,15 @@
                 <form>
                   <div class="form-group owner">
                     <label for="owner">Owner</label>
-                    <input type="text" class="form-control" id="owner">
+                    <input lang="en" type="text" class="form-control" id="owner">
                   </div>
                   <div class="form-group CVV">
                     <label for="cvv">CVV</label>
-                    <input type="text" class="form-control" id="cvv">
+                    <input maxlength="4"  type="text" class="form-control" id="cvv">
                   </div>
                   <div class="form-group" id="card-number-field">
                     <label for="cardNumber">Card Number</label>
-                    <input type="text" class="form-control" id="cardNumber">
+                    <input maxlength="13" type="number" class="form-control" id="cardNumber">
                   </div>
                   <div class="form-group" id="expiration-date">
                     <label>Expiration Date</label>
@@ -417,7 +417,7 @@
       <h1 id="bill-add-h1">Billing Address</h1>
 
       <div id="bill-address-form-div">
-        <form id="bill-address-form">
+        <form id="bill-address-form" class="bill-form">
           <div class="creditCardForm">
             <label for="owner">Name</label>
             <input type="text" class="form-control">
@@ -745,7 +745,7 @@
             </select>
           </div>
           <div class="" id="">
-            <button type="submit" id="confirm-bill-add-button">Confirm</button>
+            <button id="confirm-bill-add-button">Confirm</button>
           </div>
           <div id="bill-address-radio">
             <form>
@@ -1096,7 +1096,7 @@
             </select>
           </div>
           <div class="" id="">
-            <button type="submit" id="confirm-bill-add-button">Confirm</button>
+            <button id="confirm-shipping-add-button">Confirm</button>
           </div>
 
         </form>
@@ -1105,8 +1105,26 @@
     </div>
   </div>
   <button class="btn btn-default" id="revise-order-button">
-    <a id="revise-order-link" href="Homepage/Homepage.html">Revise Your Order</a>
+    <a id="revise-order-link" href="Homepage.html">Process Your Order</a>
   </button>
+</div>
+
+<div id="view-receipt-background">
+
+  <div id="view-receipt">
+    <div id="receipt-items">
+
+
+    </div>
+    <div id="reciept-total-cost">
+
+
+    </div>
+    <p>
+      Thank you for shopping at Brew-Ti-Ful! We appreciate your business!
+    </p>
+  </div>
+
 </div>
 
   <script src="Homepage.js"></script>
