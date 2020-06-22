@@ -204,19 +204,23 @@ a:hover {
 }
 
 .frame {
+  display:flex;
+  justify-content: center;
 	text-align: center;	
 	position: sticky;
-  padding-top: 120px;
+  /* padding-top: 120px; */
   margin-top:80px;
 	
 }
 .frame img {
-	width: 800px;
-	height: 800px;
+  
+  
+	width: 350px;
+	height: 400px;
 }
 .frame .details {
-	width: 40%;
-	height: 18%;	
+	width: 50%;
+	height: 70%;	
 	position: absolute;
 	content: "";
 	top: 45%;
@@ -715,7 +719,6 @@ h2 {
   #payment-bill-add-box {
     display: flex;
     width: 100%;
-   
     flex-direction: row;
     justify-content: space-between;
     box-sizing: border-box;
@@ -807,21 +810,22 @@ h2 {
     justify-content: center;
     text-align: center;	
     position: sticky;
-    padding-top: 120px;
-    margin-top:80px;
-    
+    /* padding-top: 120px; */
+     margin-top: 140px;
+    margin-bottom: 50px; 
   }
+
   .frame img {
     display:flex;
     justify-content: center;
     align-items: center;
-    width: 800px;
-    height: 800px;
+    width: 400px;
+    height: 450px;
   }
   .frame .details {
     
-    width: 40%;
-    height: 18%;	
+    width: 50%;
+    height: 50%;	
     position: absolute;
     content: "";
     top: 45%;

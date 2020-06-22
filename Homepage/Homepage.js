@@ -185,7 +185,7 @@ function addFoodToCart() {
         price = 4;
     } else if (productTitle == 'Quiche') { 
         price = 4;
-    } else if (productTitle == 'Cream Puff (Puff Pass)') { 
+    } else if (productTitle == 'Cream Puff(Puff Pass)') { 
         price = 3;
     } else if (productTitle == 'Cannabis Cinnabong') { 
         price = 5;
