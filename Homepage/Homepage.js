@@ -120,7 +120,7 @@ function addToCart() {
     //PRODUCT NAME x QUANTITY  = $ PRICE
 
     let productListItemElement = document.createElement("li");
-    productListItemElement.innerText = `Coffee x ${quantity} = $ ${price * quantity}  `;
+    productListItemElement.innerText = `${productTitle} x ${quantity} = $ ${price * quantity}  `;
     document.getElementById("checkout-item-list").appendChild(productListItemElement);
     //RESET FORM
     document.getElementById('whole').checked = false;
