@@ -278,31 +278,70 @@ function removeShipForm(){
   shippingH1.style.display = "none"
 
 }
-
 let subBttn = document.getElementById("pay-now");
 
 subBttn.addEventListener("click", (e) => {
-    let amexCardNum = /^(?:3[47][0-9]{13})$/;
-    let masterCardNum = /^(?:5[1-5][0-9]{14})$/;
-    let discoverCardNum = /^(?:6(?:011|5[0-9][0-9])[0-9]{12})$/;
-    let visaCardNum = /^(?:3[47][0-9]{13})$/;
 
+    e.preventDefault();
     let cardNumber = document.getElementById("cardNumber").value;
-    console.log(cardNumber);
+    let cvvNumber = document.getElementById("cvv").value;
+    let cvvInput = document.getElementById("cvv");
+    let cardInput = document.getElementById("cardNumber");
 
-    
-        if (cardNumber.length < amexCardNum.length || cardNumber.length < masterCardNum.length || cardNumber.length < discoverCardNum.length || cardNumber.length < visaCardNum.length) {
-            return true;
-        }
-        else if (cardNumber = null) {
-            alert("Please enter a credit card number!")
-            return false;
-        }
-        else {
-            alert("Not a valid credit card number!");
+    console.log(cardNumber);
+    console.log(cvvNumber)
+
+    if (cardNumber.length == 13 && cvvNumber.length == 4 || cardNumber.length == 13 && cvvNumber.length == 3) {
+        cvvInput.style.boxShadow = "5px 5px 5px lightgreen";
+        cvvInput.style.border = "1px solid green";
+        cardInput.style.boxShadow = "5px 5px 5px lightgreen";
+        cardInput.style.border = "1px solid green";
+        alert("Your credit card information is correct!")
+        removeAfterSubmit();
+
+
+        return true;
+    }
+
+    else if (cvvNumber.length < 3 && cardNumber.length == 13) {
+
+        cvvInput.style.boxShadow = "5px 5px 5px red";
+        cvvInput.style.border = "1px solid red";
+        cardInput.style.boxShadow = "5px 5px 5px lightgreen";
+        cardInput.style.border = "1px solid green";
+        alert("CVV is incorrect! Must be 3 to 4 digits long!");
+
+        return false;
+    }
+    else if (cardNumber.length < 13 && cvvNumber.length == 3 || cvvNumber.length == 4) {
+
+        cardInput.style.boxShadow = "5px 5px 5px red";
+        cardInput.style.border = "1px solid red";
+        cvvInput.style.boxShadow = "5px 5px 5px lightgreen";
+        cvvInput.style.border = "1px solid green";
+
+        alert("Credit card number is incorrect! Must be 13 digits long!");
+        return false;
+    }
+
+    else if (cvvNumber.length < 3 && cardNumber.length < 13) {
+        alert("Please enter a valid credit card or CVV number! Credit card numbers must be 13 digits long! CCV numbers must be 3 to 4 digits long!");
+        cvvInput.style.boxShadow = "5px 5px 5px red";
+        cvvInput.style.border = "1px solid red";
+        cardInput.style.boxShadow = "5px 5px 5px red";
+        cardInput.style.border = "1px solid red";
+        return false;
     }
 
 });
+
+function removeAfterSubmit() {
+
+    let cardInputForm = document.getElementById("card-inputs-info");
+    let cashForm = document.getElementById("paypal-form");
+    setTimeout(function () { alert("Your credit card information has been submitted!"); cardFormRemove(); }, 2000);
+
+}
 
 var changeTotal = document.getElementById("changeTotal");
 var button = document.getElementById("buttoncash");

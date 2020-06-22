@@ -419,23 +419,25 @@ a:hover {
   flex-direction: row;
   justify-content: left;
   align-items: center;
-  padding-left:25px;
+  
 }
 
 #paypal-form {
   display: flex;
-  flex-direction: row;
-  justify-content: left;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding-left: 25px;
+  
 }
 
 #cash {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
   padding: 10px;
   margin-top: 10px;
-  font-size: 25px;
+  /* font-size: 25px; */
   width: 100%;
   height: auto;
 }
@@ -791,6 +793,10 @@ h2 {
   
     padding-top:2px;
   }
+  #cash {
+  
+    font-size: 25px; 
+  }
 }
 
 .creditCardForm {
@@ -1020,6 +1026,9 @@ h2 {
   border: 5px solid;
 }
 .page__container{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
   max-width: 1200px;
   padding-left: 1rem;
   padding-top: 30px;

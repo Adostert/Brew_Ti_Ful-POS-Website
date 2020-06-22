@@ -357,11 +357,12 @@
           <div id="credit-card-radio">
             <input id="credit-selector" type="radio" name="payment" />
             <label for="credit-selector"></label>
-            <img class="credit-imgs" src="../images/credit-card-logos.png" alt="credit-cards-img" />
+            <img class="credit-imgs" src="../images/visa-mastercard-amex_0-e1554443240559.png" alt="credit-cards-img" />
           </div>
           <div  id="paypal-form">
-            <input onclick="cardFormRemove()" id="pp-button" type="radio" name="payment" />
+            
             <div id="cash">
+              <input onclick="cardFormRemove()" id="pp-button" type="radio" name="payment" />
               <label for="pp-button">Choose another form of payment</label>
             </div>
             </div>
@@ -765,11 +766,11 @@
           </div>
           <div id="bill-address-radio">
             <form>
-              <div>
+              <div style="display: flex; flex-direction: row; align-items:baseline;">
                 <input onclick="removeShipForm()" type="radio" name="ship-bill" class="ba-radio" >
                 <label class = "ba-label" for="ba-radio">Billing address is the same as shipping address</label>
               </div>
-              <div>
+              <div style="display: flex; flex-direction: row; align-items:baseline;">
                 <input onclick="displayShipForm()" type="radio" name="ship-bill" class="ba-radio" id="ship-add-radio">
                 <label class = "ba-label"for="ba-radio">Shipping address is different than billing address</label>
               </div>
@@ -1119,10 +1120,11 @@
       </div>
      
     </div>
+    <button onclick="receiptPopUp()" class="btn btn-default" id="revise-order-button" style="color:white; font-size:20px; padding:10px;">
+      Process Your Order
+    </button>
   </div>
-  <button onclick="receiptPopUp()" class="btn btn-default" id="revise-order-button">
-    Process Your Order
-  </button>
+  
 </div>
 <div id="view-receipt-background">
 
