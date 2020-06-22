@@ -253,3 +253,28 @@ function calculateChange() {
   changeTotal.style.display = "block";
   changeTotal.textContent = "Your change will be $" + change / 100;
 }
+
+function receiptPopUp(e) {
+
+    let receiptDiv = document.getElementById("view-receipt-background");
+  
+    let checkoutItems = document.getElementById("checkout-items");
+    let checkoutTotal = document.getElementById("total-price");
+    let receiptItems = document.getElementById("receipt-items");
+    let receiptTotal = document.getElementById("receipt-total-cost");
+
+    receiptItems.append(checkoutItems);
+    receiptTotal.append(checkoutTotal);
+
+
+    receiptDiv.style.display = "flex";
+  
+    window.scrollTo(0.0);
+}
+
+function closeReceipt(){
+
+    let receipt = document.getElementById("view-receipt-background");
+    receipt.style.display = "none";
+
+}

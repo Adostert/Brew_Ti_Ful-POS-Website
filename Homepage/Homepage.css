@@ -848,3 +848,205 @@ input,
   margin: 20px 0;
   display: none;
 }
+
+#view-receipt-background{
+  display:none;
+  position: absolute;
+  justify-content: center;
+  align-items:center;
+  width:100vw;
+  height:100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 4; 
+ 
+}
+
+#view-receipt {
+
+  
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 20px 20px 20px;
+  margin: 40px;
+  align-items:center;
+  text-align: center;
+  background-color: white;
+  width:100%;
+  height: 600px;
+  border: 5px solid black;
+  z-index: 5;
+  background-image: url(../images/bcswkp-transp-logo.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+ 
+  
+}
+
+
+
+#receipt-items{
+  
+  display:flex;
+  font-family:Knewave;
+  width: 100%;
+  height:auto;
+  /* border: 1px solid black; */
+}
+
+#receipt-total-cost {
+  display:flex;
+  font-family:Knewave;
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+  /* border: 1px solid black; */
+
+}
+#close-receipt {
+  display:flex;
+  justify-content: flex-end;
+  color: #aaaaaa;
+  height: auto;
+  width:100%;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding: 0;
+  font-size: 20px;
+  font-weight: bold;
+  
+
+}
+
+#close-receipt:hover,
+#close-receipt:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#receipt-email{
+
+  display:flex;
+  justify-content: center;
+  width: 100%;
+  font-size: 15px;
+  height: auto;
+  flex-direction: row;
+  
+}
+
+#receipt-text {
+
+  font-size: 20px;;
+
+}
+
+#inp-email {
+
+  margin: 2px;
+}
+
+.inp-label {
+
+  margin: 2px;
+  padding-top:0;
+}
+
+@media screen and (min-width: 770px) {
+  
+
+  #view-receipt-background{
+    display:none;
+    position: absolute;
+    justify-content: center;
+    align-items:center;
+    width:100vw;
+    height:100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 4; 
+  
+  }
+  
+  #view-receipt {
+  
+    display:flex;
+    flex-direction: column;
+    padding: 0 20px 20px 20px;
+    align-items:center;
+    text-align: center;
+    background-color: white;
+    width:500px;
+    height: 700px;
+    border: 5px solid black;
+    z-index: 5;
+  }
+  
+  #receipt-items{
+  
+    display:flex;
+    font-family:Knewave;
+    width: 100%;
+    height:auto;
+    /* border: 1px solid black; */
+  }
+  
+  #receipt-total-cost {
+    display:flex;
+    font-family:Knewave;
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    /* border: 1px solid black; */
+  
+  }
+  #receipt-text {
+  
+   display:flex;
+   width: 100%;
+   height:auto;
+   margin-top: 10px;
+  }
+  
+  #receipt-image {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    width: auto;
+    height: auto;
+  
+  }
+  
+  #receipt-logo {
+  
+    width: 200px;
+    height: 250px;
+  }
+  
+  #close-receipt {
+    display:flex;
+    justify-content: flex-end;
+    color: #aaaaaa;
+    height: auto;
+    width:100%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 0;
+    font-size: 20px;
+    font-weight: bold;
+    
+  
+  }
+  
+  #close-receipt:hover,
+  #close-receipt:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .inp-label {
+    padding-top:2px;
+  }
+}
