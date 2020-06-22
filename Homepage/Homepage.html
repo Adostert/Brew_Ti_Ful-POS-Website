@@ -344,8 +344,9 @@
           </div>
         <div id="popup-article" class="popupCash">
           <div class="popup__block">
-            <label for="given">Given:</label>
-            <input type="number" id="given" placeholder="21.43">
+            <div onclick="closeCashPop();" id="close-cash">&times;</div>
+            <label for="given" style="font-family:Knewave; font-size: 30px; padding-left:0;">Given:</label>
+            <input style="margin-bottom:10px;" type="number" id="given">
             <button id="buttoncash">Calculate Change</button>
             <div id="container">
               <div id="changeTotal"></div>
@@ -1140,17 +1141,18 @@
 
     </div>
     <div id=receipt-text>
-      <p>
-        Thank you for shopping at Brew-Ti-Ful! 
+      <p style="width:100%; display:flex; flex-direction: column;">
+        Thank you for shopping at   
       </p>
+      <p style = "font-family:Knewave; font-size:30px; border-bottom: solid 7px rgba(195, 18, 77, 0.7); padding:0;">Brew-Ti-Ful!</p>
       <p>We appreciate your business!</p>
     </div>
    
-    <div id="receipt-email">
+    <!-- <div id="receipt-email">
       <label class= "inp-label" for="inp-email">Mail To:</label>
       <input id="inp-email" type="email" name="email">
       <input type="submit">
-    </div>
+    </div> -->
   </div>
 
 </div>
