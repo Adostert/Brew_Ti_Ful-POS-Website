@@ -200,11 +200,9 @@ function removeShipForm() {
 
 
 function receiptPopUp(e) {
-    //    e.preventDefault();
 
-    let entireCheckout = document.getElementById("background-shadow");
     let receiptDiv = document.getElementById("view-receipt-background");
-    let receiptActual = document.getElementById("view-receipt");
+  
     let checkoutItems = document.getElementById("checkout-items");
     let checkoutTotal = document.getElementById("total-price");
     let receiptItems = document.getElementById("receipt-items");
@@ -215,7 +213,7 @@ function receiptPopUp(e) {
 
 
     receiptDiv.style.display = "flex";
-    receiptActual.style.zIndex = "999";
+  
     window.scrollTo(0.0);
 }
 
