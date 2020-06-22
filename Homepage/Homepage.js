@@ -30,33 +30,26 @@ function down(min) {
 }
 
 
-// modal popup box
-// get modal
 const modalDrink = document.getElementById("myModal");
 
-// Get the <span> element that closes the modal
+
 const span = document.getElementsByClassName("close")[0];
 
-// get item class
+
 const menuItems = document.getElementsByClassName('item');
 console.log(menuItems);
-// [htmlElement, htmlElement, ...]
 
-// When the user clicks on <span> (x), close the modal
 span.onclick = function() {
     modalDrink.style.display = "none";
-    // modalFood.style.display = "none";
+
 }
 
-// When the user clicks anywhere outside of the modal, close it
+
 window.onclick = function(event) {
     if (event.target == modalDrink) {
     modalDrink.style.display = "none";
     }
-    // const menuImages = event.target.attributes[1].nodeValue;
-    // const newImage = document.querySelector('.item-image');
-    // newImage.setAttribute('src', menuImages);
-    // console.log(event.target.attributes[1].nodeValue)
+
 }
 
 function openModal(event) { 
@@ -200,24 +193,39 @@ function removeShipForm(){
 let subBttn = document.getElementById("pay-now");
 
 subBttn.addEventListener("click", (e) => {
-    let amexCardNum = /^(?:3[47][0-9]{13})$/;
-    let masterCardNum = /^(?:5[1-5][0-9]{14})$/;
-    let discoverCardNum = /^(?:6(?:011|5[0-9][0-9])[0-9]{12})$/;
-    let visaCardNum = /^(?:3[47][0-9]{13})$/;
+  let amexCardNum = /^(?:3[47][0-9]{13})$/;
+  let masterCardNum = /^(?:5[1-5][0-9]{14})$/;
+  let discoverCardNum = /^(?:6(?:011|5[0-9][0-9])[0-9]{12})$/;
+  let visaCardNum = /^(?:3[47][0-9]{13})$/;
 
-    let cardNumber = document.getElementById("cardNumber").value;
-    console.log(cardNumber);
+  let cardNumber = document.getElementById("cardNumber").value;
+  console.log(cardNumber);
 
-    
-        if (cardNumber.length < amexCardNum.length || cardNumber.length < masterCardNum.length || cardNumber.length < discoverCardNum.length || cardNumber.length < visaCardNum.length) {
-            return true;
-        }
-        else if (cardNumber = null) {
-            alert("Please enter a credit card number!")
-            return false;
-        }
-        else {
-            alert("Not a valid credit card number!");
-    }
-
+  if (
+    cardNumber.length < amexCardNum.length ||
+    cardNumber.length < masterCardNum.length ||
+    cardNumber.length < discoverCardNum.length ||
+    cardNumber.length < visaCardNum.length
+  ) {
+    return true;
+  } else if ((cardNumber = null)) {
+    alert("Please enter a credit card number!");
+    return false;
+  } else {
+    alert("Not a valid credit card number!");
+  }
 });
+var changeTotal = document.getElementById("changeTotal");
+var button = document.getElementById("buttoncash");
+
+// when button is clicked, trigger the calculateChange function below
+buttoncash.addEventListener("click", calculateChange);
+
+function calculateChange() {
+  // Math
+
+  var given = document.getElementById("given").value;
+  var change = given * 100 - total * 100;
+  changeTotal.style.display = "block";
+  changeTotal.textContent = "Your change will be $" + change / 100;
+}
