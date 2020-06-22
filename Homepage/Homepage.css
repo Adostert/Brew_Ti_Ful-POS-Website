@@ -145,36 +145,21 @@ section {
 }
 .logo {
     color: black;
-    display: inline-block;
-    position: absolute;
+    /* display: inline-block;
+    position: absolute; */
     text-transform: uppercase;
     width: 100%;
-    max-width: 270px;
-    font-size: 60px;
-    line-height: 50px;
+    border-bottom:solid 7px rgba(195, 18, 77, 0.7);
+    /* max-width: 270px; */
+    font-size: 30px;
+    /* line-height: 50px; */
     left: 70px;
     letter-spacing: 2px;
     font-family: "Knewave";
     cursor: pointer;
-    transform: rotate(-5deg);
-    transition: 0.3s ease, left 0.4s ease z-index 10;
-  /* adds the pink shape under name  */
 }
-.logo::before {
-    content: "";
-    position: absolute;
-    left: 30%;
-    bottom: -10px;
-    transform: translateX(-50%);
-    height: 10px;
-    width: 120px;
-    background-color: rgba(195, 18, 77, 0.7);
-  }
-.logo:hover {
-  transform: rotate(-8deg) scale(1.15);
-  transition: 0.3s;
-  transition-timing-function: cubic-bezier(0.3, 0.2, 0, 2);
-}
+
+
 .nav-link {
     color: teal !important;
     font-weight: 800;
@@ -867,6 +852,45 @@ h2 {
     transform: translate(-50%, -50%) rotateY(0deg);
     opacity: 1;
   }
+
+  .logo {
+    display:flex;
+    color: black;
+    display: inline-block;
+    position: absolute;
+    text-transform: uppercase;
+    width: 50%;
+    max-width: 270px;
+    font-size: 60px;
+    line-height: 50px;
+    left: 70px;
+    letter-spacing: 2px;
+    font-family: "Knewave";
+    cursor: pointer;
+    transform: rotate(-5deg);
+    transition: 0.3s ease, left 0.4s ease z-index 10; 
+  
+}
+.logo::before {
+    content: "";
+    position: absolute; 
+    left: 30%; 
+    bottom: -10px;
+    transform: translateX(-50%); 
+    height: 10px;
+    width: 120px;
+    background-color: rgba(195, 18, 77, 0.7);
+  }
+.logo:hover {
+  transform: rotate(-8deg) scale(1.15);
+  transition: 0.3s;
+  transition-timing-function: cubic-bezier(0.3, 0.2, 0, 2);
+}
+
+.logo:hover {
+    transform: translateX(-10%) scale(1.2);
+  }
+
 }
 
 .creditCardForm {
