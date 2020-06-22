@@ -5,6 +5,30 @@ let productInfo = '';
 let productTitle = '';
 let imageSource = '';
 
+
+function receiptPopUp(e) {
+
+    let receiptDiv = document.getElementById("view-receipt-background");
+    let cashTotal = document.getElementById("changeTotal");
+    let checkoutItems = document.getElementById("checkout-items");
+    let checkoutTotal = document.getElementById("total-price");
+    let receiptItems = document.getElementById("receipt-items");
+    let receiptTotal = document.getElementById("receipt-total-cost");
+
+    receiptItems.append(checkoutItems);
+    receiptTotal.append(checkoutTotal);
+    cashTotal.append(checkoutTotal);
+
+
+    receiptDiv.style.display = "flex";
+
+    window.scrollTo(0.0);
+}
+
+
+
+
+
 function checkoutPopUp(){
 
     const proPage = document.getElementById("product-page");
@@ -252,30 +276,5 @@ function calculateChange() {
   var change = given * 100 - total * 100;
   changeTotal.style.display = "block";
   changeTotal.textContent = "Your change will be $" + change / 100;
-}
+};
 
-function receiptPopUp(e) {
-
-    let receiptDiv = document.getElementById("view-receipt-background");
-    let receiptCash = document.getElementById("changeTotal");
-    let checkoutItems = document.getElementById("checkout-items");
-    let checkoutTotal = document.getElementById("total-price");
-    let receiptItems = document.getElementById("receipt-items");
-    let receiptTotal = document.getElementById("receipt-total-cost");
-
-    receiptItems.append(checkoutItems);
-    receiptTotal.append(checkoutTotal);
-    receiptCash.append(changeTotal);
-
-
-    receiptDiv.style.display = "flex";
-  
-    window.scrollTo(0.0);
-}
-
-function closeReceipt(){
-
-    let receipt = document.getElementById("view-receipt-background");
-    receipt.style.display = "none";
-
-}
