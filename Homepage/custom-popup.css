@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,600,800);
+
 /* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */
@@ -17,6 +19,7 @@
   /* Modal Content/Box */
 .modal-content,
 .modal-content-food {
+    font-family: Raleway;
     background-color: #fefefe;
     margin: 8% auto; 
     border: 1px solid #888;
