@@ -241,3 +241,15 @@ subBttn.addEventListener("click", (e) => {
     }
 
 });
+
+var changeTotal = document.getElementById("changeTotal");
+var button = document.getElementById("buttoncash");
+// when button is clicked, trigger the calculateChange function below
+buttoncash.addEventListener("click", calculateChange);
+function calculateChange() {
+  // Math
+  var given = document.getElementById("given").value;
+  var change = given * 100 - total * 100;
+  changeTotal.style.display = "block";
+  changeTotal.textContent = "Your change will be $" + change / 100;
+}
