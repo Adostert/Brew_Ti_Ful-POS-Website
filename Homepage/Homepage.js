@@ -17,7 +17,7 @@ function receiptPopUp(e) {
 
     receiptItems.append(checkoutItems);
     receiptTotal.append(checkoutTotal);
-    cashTotal.append(checkoutTotal);
+    //cashTotal.append(receiptTotal);
 
 
     receiptDiv.style.display = "flex";
@@ -354,4 +354,10 @@ function calculateChange() {
   changeTotal.style.display = "block";
   changeTotal.textContent = "Your change will be $" + change / 100;
 };
+
+function closeReceipt() {
+
+    document.getElementById("view-receipt-background").style.display = "none";
+  
+  };
 
