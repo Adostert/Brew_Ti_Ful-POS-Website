@@ -66,9 +66,6 @@ const spanFood = document.getElementsByClassName("close-food")[0];
 // get item class
 const menuItems = document.getElementsByClassName('item');
 const menuItemsFood = document.getElementsByClassName('item-food');
-console.log(menuItemsFood);
-console.log(menuItems);
-// [htmlElement, htmlElement, ...]
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
@@ -113,6 +110,7 @@ function openFoodModal(event) {
 for (const itemFood of menuItemsFood) {
     itemFood.addEventListener('click', (e) => {
         openFoodModal(e);
+        console.log(e);
         productTitle = e.target.alt;
         imageSource = e.target.src;
         document.getElementById('popupImageFood').setAttribute('alt', productTitle);
@@ -145,13 +143,13 @@ function addToCart() {
     const skimMilk = document.getElementById('skim').checked;
     const veganMilk = document.getElementById('vegan').checked;
     if (wholeMilk) { 
-        milk = 'whole milk';
+        milk = 'Whole milk';
     } else if (skimMilk) { 
-        milk = 'skim milk';
+        milk = 'Skim milk';
     } else if (veganMilk) { 
-        milk = 'vegan milk';
+        milk = 'Vegan milk';
     } else { 
-        milk = null;
+        milk = '';
     }
     console.log(`${size}, ${price}, ${milk}, ${quantity}`);
     
@@ -166,7 +164,7 @@ function addToCart() {
     //PRODUCT NAME x QUANTITY  = $ PRICE
     
     let productListItemElement = document.createElement("li");
-    productListItemElement.innerText = `${productTitle} x ${quantity} = $ ${price * quantity}  `;
+    productListItemElement.innerText = `${productTitle} x ${quantity} = $ ${price * quantity}  \n ${milk}`;
     document.getElementById("checkout-item-list").appendChild(productListItemElement);
     //RESET FORM
     document.getElementById('whole').checked = false;

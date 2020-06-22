@@ -75,7 +75,7 @@
         <p class="required">Required</p>
       </div>
       <div class="options">
-        <form action="#">
+        <div class="category-options-container">
           <div class="option-row">
             <div class="option-label">
               <input type="radio" id="small" name="size" value="small">
@@ -98,26 +98,31 @@
             <div class="amount">$3.00</div>
           </div>
 
-        </form>
+      </div>
       </div>
 
       <div class="category">
         <p class="category-header">Milk</p>
       </div>
       <div class="options">
-        <form action="#">
-          <input type="radio" id="whole" name="milk" value="whole-milk">
-          <label for="whole-milk">Whole Milk</label><br>
-          <input type="radio" id="skim" name="milk" value="skim-milk">
-          <label for="skim-milk">Skim Milk</label><br>
-
-          <div class="option-row">
+        <div class="category-options-container">
+        <div class="option-row">
+          <div class="option-label">
+            <input type="radio" id="whole" name="milk" value="whole-milk">
+            <label for="whole-milk">Whole Milk</label>
+          </div>
+        </div>
+        <div class="option-row">
+          <div class="option-label">
+            <input type="radio" id="skim" name="milk" value="skim-milk">
+            <label for="skim-milk">Skim Milk</label>
+          </div>
+        </div>
             <div class="option-label">
               <input type="radio" id="vegan" name="milk" value="vegan-milk">
               <label for="vegan-milk">Vegan Milk</label>
             </div>
           </div>
-        </form>
       </div>
 
       <div class="quantity-container">
