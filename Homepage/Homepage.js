@@ -9,7 +9,7 @@ let imageSource = '';
 function receiptPopUp(e) {
 
     let receiptDiv = document.getElementById("view-receipt-background");
-    let cashTotal = document.getElementById("changeTotal");
+    // let cashTotal = document.getElementById("changeTotal");
     let checkoutItems = document.getElementById("checkout-items");
     let checkoutTotal = document.getElementById("total-price");
     let receiptItems = document.getElementById("receipt-items");
@@ -17,7 +17,7 @@ function receiptPopUp(e) {
 
     receiptItems.append(checkoutItems);
     receiptTotal.append(checkoutTotal);
-    //cashTotal.append(receiptTotal);
+    // receiptTotal.append(cashTotal);
 
 
     receiptDiv.style.display = "flex";
