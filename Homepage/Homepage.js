@@ -13,6 +13,7 @@ function checkoutPopUp() {
 
     checkOut.style.display = "flex";
     proPage.style.display = "none"
+    window.scrollTo(0, 0);
 }
 
 // quantity +/- increments
@@ -198,10 +199,24 @@ function removeShipForm() {
 }
 
 
-function receiptPopUp(){
+function receiptPopUp(e) {
+    //    e.preventDefault();
+
     let entireCheckout = document.getElementById("background-shadow");
     let receiptDiv = document.getElementById("view-receipt-background");
-    setTimeout(function(){receiptDiv.style.display = "flex"; entireCheckout.style.zIndex = "-1";}, 6000);
+    let receiptActual = document.getElementById("view-receipt");
+    let checkoutItems = document.getElementById("checkout-items");
+    let checkoutTotal = document.getElementById("total-price");
+    let receiptItems = document.getElementById("receipt-items");
+    let receiptTotal = document.getElementById("receipt-total-cost");
+
+    receiptItems.append(checkoutItems);
+    receiptTotal.append(checkoutTotal);
+
+
+    receiptDiv.style.display = "flex";
+    receiptActual.style.zIndex = "999";
+    window.scrollTo(0.0);
 }
 
 
@@ -211,8 +226,8 @@ function removeAfterSubmit() {
 
     let cardInputForm = document.getElementById("card-inputs-info");
     let cashForm = document.getElementById("paypal-form");
-    setTimeout(function(){alert("Your credit card information has been submitted!"); cardInputForm.style.display = "none"; cashForm.style.display = "none";}, 3000);
-    
+    setTimeout(function () { alert("Your credit card information has been submitted!"); cardInputForm.style.display = "none"; cashForm.style.display = "none"; }, 3000);
+
 
 }
 
@@ -234,13 +249,13 @@ subBttn.addEventListener("click", (e) => {
         cardInput.style.border = "1px solid green";
         alert("Your credit card information is correct!")
         removeAfterSubmit();
-        
+
 
         return true;
     }
-    
+
     else if (cvvNumber.length < 3 && cardNumber.length == 13) {
-        
+
         cvvInput.style.boxShadow = "5px 5px 5px red";
         cvvInput.style.border = "1px solid red";
         cardInput.style.boxShadow = "5px 5px 5px lightgreen";
@@ -250,7 +265,7 @@ subBttn.addEventListener("click", (e) => {
         return false;
     }
     else if (cardNumber.length < 13 && cvvNumber.length == 3 || cvvNumber.length == 4) {
-        
+
         cardInput.style.boxShadow = "5px 5px 5px red";
         cardInput.style.border = "1px solid red";
         cvvInput.style.boxShadow = "5px 5px 5px lightgreen";
@@ -278,16 +293,24 @@ billCommitBttn.addEventListener("click", (e) => {
     e.preventDefault();
     let billForm = document.getElementById("bill-address-form-div");
     alert("Your Billing Address has been submitted!");
-    billForm.style.display = "none";
-    //Thank you for shopping at Brewtiful!
+    
+ 
 });
 
-shipCommitBttn.addEventListener("click", (e) =>{
+shipCommitBttn.addEventListener("click", (e) => {
     e.preventDefault();
-     let shippingForm = document.getElementById("shipping-add-form-div");
-     let billForm = document.getElementById("bill-address-form-div");
-     alert("Your Billing & Shipping addresses have been submitted!")
+    let shippingForm = document.getElementById("shipping-add-form-div");
+    let billForm = document.getElementById("bill-address-form-div");
+    let shipH1 = document.getElementById("ship-add-h1");
+    alert("Your Billing & Shipping addresses have been submitted!")
     shippingForm.style.display = "none";
-    billForm.style.display = "none";
-    //Thank you for shopping at Brewtiful!
+    shipH1.style.display = "none";
+    
 });
+
+function closeReceipt(){
+
+    let receipt = document.getElementById("view-receipt-background");
+    receipt.style.display = "none";
+
+}
