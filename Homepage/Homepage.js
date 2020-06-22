@@ -193,9 +193,12 @@ function addFoodToCart() {
         price = 5;
     } else if (productTitle == 'Marijuana Mudslide') { 
         price = 7;
+    } else if (productTitle == 'CBD Lemonade') { 
+        price = 6; 
     } else { 
         price = null;
     }
+
     quantity = document.getElementById('quantity').value;
     console.log(`${price}, ${quantity}`);
     subTotal += price * quantity;
