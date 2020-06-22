@@ -60,7 +60,7 @@ const modalDrink = document.getElementById("myModal");
 const modalFood = document.getElementById("myModalFood");
 
 // Get the <span> element that closes the modal
-const span = document.getElementsByClassName("close")[0];
+const span = document.getElementsByClassName("close", "close-food")[0];
 const spanFood = document.getElementsByClassName("close-food")[0];
 
 // get item class
@@ -73,6 +73,9 @@ console.log(menuItems);
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
     modalDrink.style.display = "none";
+}
+
+spanFood.onclick = function() {
     modalFood.style.display = "none";
 }
 
@@ -174,6 +177,40 @@ function addToCart() {
     document.getElementById('large').checked = false;
     document.getElementById('quantity').value = 1;
     modalDrink.style.display = "none";
+}
+
+function addFoodToCart() { 
+    let price, quantity;
+    if (productTitle == 'Croissant') { 
+        price = 3;
+    } else if (productTitle == 'Dank-ish') { 
+        price = 4;
+    } else if (productTitle == 'Quiche') { 
+        price = 4;
+    } else if (productTitle == 'Cream Puff (Puff Pass)') { 
+        price = 3;
+    } else if (productTitle == 'Cannabis Cinnabong') { 
+        price = 5;
+    } else if (productTitle == 'Marijuana Mudslide') { 
+        price = 7;
+    } else { 
+        price = null;
+    }
+    quantity = document.getElementById('quantity').value;
+    console.log(`${price}, ${quantity}`);
+    subTotal += price * quantity;
+    taxes = subTotal * .06;
+    total = subTotal + taxes;
+
+    document.getElementById("subtotal-price").innerText = `$  ${subTotal}`;
+    document.getElementById("total-price").innerText = `Taxes: $ ${taxes} \n Total: $ ${total}`;
+    document.getElementsByClassName("product-name").innerText = `Items: ${productInfo}`;
+    
+    productListItemElement = document.createElement("li");
+    productListItemElement.innerText = `${productTitle} x ${quantity} = $ ${price * quantity}  `;
+    document.getElementById("checkout-item-list").appendChild(productListItemElement);
+
+    modalFood.style.display = "none";
 }
 
 

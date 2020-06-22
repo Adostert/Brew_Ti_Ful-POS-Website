@@ -214,6 +214,7 @@ label {
         margin: 5% auto; 
         width: 100%;
     }
+
 }
 
 /* breakpoint lg */
@@ -223,6 +224,12 @@ label {
         width: 475px; 
         height: 625px;
     }
+
+    .modal-content-food { 
+        margin: 10% auto; 
+        width: 475px;
+        height: auto;
+    }
 }
 
 /* breakpoint xl */
@@ -231,5 +238,11 @@ label {
         margin: 7% auto; 
         width: 475px; 
         height: 625px;
+    }
+
+    .modal-content-food { 
+        margin: 10% auto; 
+        width: 475px;
+        height: auto;
     }
 }
