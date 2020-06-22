@@ -330,27 +330,38 @@
       <h2>Total:</h2>
       <div id="total-price"></div>
     </div>
-    <div id="payment-bill-add-box">
-      <!--Start of Payment Info Box -->
-      <div class="pos-payment-info-box">
-        <h1 id="pay-select-h1">Payment Selection</h1>
-
-        <form id="credit-card-form" action="">
-          <div  id="paypal-form">
-            <input onclick="cardFormRemove()" id="pp-button" type="radio" name="payment" />
-            <div id="cash">
-              <label for="pp-button">CASH: </label>
-              <input for="pp-button" type="text" class="form-control" placeholder="Amount">
-            </div>
-            
-
+      <div id="payment-bill-add-box">
+        <!--Start of Payment Info Box -->
+        <div class="pos-payment-info-box">
+          <h1 id="pay-select-h1">Payment Selection</h1>
+          <div class="page__container">
+            <a href="#popup-article" class="open-popup">Pay with cash</a>
           </div>
-
+        <div id="popup-article" class="popupCash">
+          <div class="popup__block">
+            <label for="given">Given:</label>
+            <input type="number" id="given" placeholder="21.43">
+            <button id="buttoncash">Calculate Change</button>
+            <div id="container">
+              <div id="changeTotal"></div>
+            </div>
+          </div>
+          <a href="#" class="popup__close">close</a>
+        </div>
+        <div  id="paypal-form">
           <div id="credit-card-radio">
             <input id="credit-selector" type="radio" name="payment" />
             <label for="credit-selector"></label>
             <img class="credit-imgs" src="../images/credit-card-logos.png" alt="credit-cards-img" />
           </div>
+          <div  id="paypal-form">
+            <input onclick="cardFormRemove()" id="pp-button" type="radio" name="payment" />
+            <div id="cash">
+              <label for="pp-button">Choose another form of payment</label>
+            </div>
+            </div>
+          </div>
+        </div>
 
           <div id="card-inputs-info">
             <div class="creditCardForm">
@@ -1098,16 +1109,45 @@
           <div class="" id="">
             <button type="submit" id="confirm-bill-add-button">Confirm</button>
           </div>
-
+          
         </form>
       </div>
-
+     
     </div>
   </div>
-  <button class="btn btn-default" id="revise-order-button">
-    <a id="revise-order-link" href="Homepage/Homepage.html">Revise Your Order</a>
+  <button onclick="receiptPopUp()" class="btn btn-default" id="revise-order-button">
+    Process Your Order
   </button>
 </div>
+<div id="view-receipt-background">
+
+  <div id="view-receipt">
+    <div onclick="closeReceipt();" id="close-receipt">&times;</div>
+    <h1 id="checkout-h1">Receipt</h1>
+    <div id="receipt-items">
+
+
+    </div>
+    <div id="receipt-total-cost">
+
+
+    </div>
+    <div id=receipt-text>
+      <p>
+        Thank you for shopping at Brew-Ti-Ful! We appreciate your business!
+      </p>
+    </div>
+   
+    <div id="receipt-email">
+      <label class= "inp-label" for="inp-email">Mail To:</label>
+      <input id="inp-email" type="email" name="email">
+      <input type="submit">
+    </div>
+  </div>
+
+</div>
+
+
 
   <script src="Homepage.js"></script>
 </body>

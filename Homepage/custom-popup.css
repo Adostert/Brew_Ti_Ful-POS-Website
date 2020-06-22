@@ -7,6 +7,7 @@
     top: 0;
     width: 100%; /* Full width */
     height: 100%; /* Full height */
+    /* overflow: auto; Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
     z-index: 100;
@@ -23,6 +24,16 @@
     height: 700px;
     overflow: auto;
 }
+
+/* .modal-content-food {
+    background-color: #fefefe;
+    margin: 8% auto; 
+    border: 1px solid #888;
+    width: 100%; 
+    height: 720px;
+    overflow: auto;
+} */
+
 
   /* The Close Button */
 .close, .close-food {

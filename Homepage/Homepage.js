@@ -5,6 +5,30 @@ let productInfo = '';
 let productTitle = '';
 let imageSource = '';
 
+
+function receiptPopUp(e) {
+
+    let receiptDiv = document.getElementById("view-receipt-background");
+    let cashTotal = document.getElementById("changeTotal");
+    let checkoutItems = document.getElementById("checkout-items");
+    let checkoutTotal = document.getElementById("total-price");
+    let receiptItems = document.getElementById("receipt-items");
+    let receiptTotal = document.getElementById("receipt-total-cost");
+
+    receiptItems.append(checkoutItems);
+    receiptTotal.append(checkoutTotal);
+    cashTotal.append(checkoutTotal);
+
+
+    receiptDiv.style.display = "flex";
+
+    window.scrollTo(0.0);
+}
+
+
+
+
+
 function checkoutPopUp(){
 
     const proPage = document.getElementById("product-page");
@@ -49,6 +73,7 @@ console.log(menuItems);
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
     modalDrink.style.display = "none";
+    modalFood.style.display = "none";
 }
 
 spanFood.onclick = function() {
@@ -244,3 +269,16 @@ subBttn.addEventListener("click", (e) => {
     }
 
 });
+
+var changeTotal = document.getElementById("changeTotal");
+var button = document.getElementById("buttoncash");
+// when button is clicked, trigger the calculateChange function below
+buttoncash.addEventListener("click", calculateChange);
+function calculateChange() {
+  // Math
+  var given = document.getElementById("given").value;
+  var change = given * 100 - total * 100;
+  changeTotal.style.display = "block";
+  changeTotal.textContent = "Your change will be $" + change / 100;
+};
+
