@@ -14,7 +14,8 @@
 }
 
   /* Modal Content/Box */
-.modal-content {
+.modal-content,
+.modal-content-food {
     background-color: #fefefe;
     margin: 8% auto; 
     border: 1px solid #888;
@@ -24,7 +25,7 @@
 }
 
   /* The Close Button */
-.close {
+.close, .close-food {
     color: #aaa;
     float: right;
     font-size: 28px;
@@ -32,7 +33,9 @@
 }
 
 .close:hover,
-.close:focus {
+.close:focus,
+.close-food:hover,
+.close-food:hover {
     color: black;
     text-decoration: none;
     cursor: pointer;
@@ -144,7 +147,10 @@ label {
 
 .quantity-container { 
     padding-bottom: 15px;
-    
+}
+
+.quantity-container-food { 
+    padding-bottom: 0;
 }
 
 .category-quantity { 
@@ -192,10 +198,12 @@ label {
 
 /* breakpoint md */
 @media (min-width: 768px) and (max-width: 991px) {
-    .modal-content { 
+    .modal-content,
+    .modal-content-food { 
         margin: 5% auto; 
         width: 100%;
     }
+
 }
 
 /* breakpoint lg */
@@ -205,6 +213,12 @@ label {
         width: 475px; 
         height: 625px;
     }
+
+    .modal-content-food { 
+        margin: 10% auto; 
+        width: 475px;
+        height: auto;
+    }
 }
 
 /* breakpoint xl */
@@ -213,5 +227,11 @@ label {
         margin: 7% auto; 
         width: 475px; 
         height: 625px;
+    }
+
+    .modal-content-food { 
+        margin: 10% auto; 
+        width: 475px;
+        height: auto;
     }
 }

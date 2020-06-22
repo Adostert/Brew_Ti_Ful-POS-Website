@@ -150,6 +150,52 @@
 
 <!-- END POPUP -->
 
+<!-- START POPUP -->
+<div id="myModalFood" class="modal">
+
+  <!-- POPUP CONTENT -->
+  <div class="modal-content-food">
+    
+    <div class="header-container">
+      <span class="close-food">&times;</span>
+    </div>
+
+    <div class="image-container">
+      <div class="popup-image">
+        <img src="../images/coffe.jpeg" alt="Coffee" class="item-image" id="popupImageFood">
+      </div>
+    </div>
+
+    <div class="quantity-container-food">
+      <div class="form-group">
+        <div class="category-quantity">
+          <div class="category">
+            <p class="category-header">Quantity</p>
+          </div>
+          <div class="input-group">
+            <div class="input-group-btn-down">
+              <button id="down" class="btn btn-default" onclick=" down('0')"> - </button>
+            </div>
+            <input type="text" id="quantity" class="form-control input-number" value="1" />
+            <div class="input-group-btn">
+              <button id="up" class="btn btn-default" onclick="up('10')">+ </button>
+            </div>         
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <button class="add-button" onclick="addToCart()">
+      <div class="add-cart">Add to cart</div>
+    </button>
+
+  </div>
+
+</div>
+
+<!-- END POPUP -->
+
 
   <section id="Product">
     <div class="container-fluid">
@@ -192,7 +238,7 @@
         </div>
       </div>
       <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-3 mt-3">
-        <div class="item">
+        <div class="item-food">
           <img class="img-thumbnail" src="../images/lemonade.jpeg" alt="CBD Lemonade" />
           <div class="row text-center">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -202,7 +248,7 @@
         </div>
       </div>
       <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-3 mt-3">
-        <div class="item">
+        <div class="item-food">
           <img class="img-thumbnail" src="../images/croissant.jpeg" alt="Croissant" />
           <div class="row text-center">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -212,7 +258,7 @@
         </div>
       </div>
       <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-3 mt-3">
-        <div class="item">
+        <div class="item-food">
           <img class="img-thumbnail" src="../images/danish.jpg" alt="Dank-ish" />
           <div class="row text-center">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -222,7 +268,7 @@
         </div>
       </div>
       <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-3 mt-3">
-        <div class="item">
+        <div class="item-food">
           <img class="img-thumbnail" src="../images/quiche.jpeg" alt="Quiche" />
           <div class="row text-center">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -232,7 +278,7 @@
         </div>
       </div>
       <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-3 mt-3">
-        <div class="item">
+        <div class="item-food">
           <img class="img-thumbnail" src="../images/cream-puff.jpeg" alt="Cream Puff(Puff Pass)" />
           <div class="row text-center">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -242,7 +288,7 @@
         </div>
       </div>
       <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-3 mt-3">
-        <div class="item">
+        <div class="item-food">
           <img class="img-thumbnail" src="../images/cinnamon-roll.jpeg" alt="Cannabis Cinnabong" />
           <div class="row text-center">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -252,7 +298,7 @@
         </div>
       </div>
       <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-3 mt-3">
-        <div class="item">
+        <div class="item-food">
           <img class="img-thumbnail" src="../images/mj-mudslide.jpeg" alt="Marijuana Mudslide" />
           <div class="row text-center">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">

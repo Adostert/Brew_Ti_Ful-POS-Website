@@ -33,11 +33,16 @@ function down(min) {
 // get modal
 const modalDrink = document.getElementById("myModal");
 
+const modalFood = document.getElementById("myModalFood");
+
 // Get the <span> element that closes the modal
 const span = document.getElementsByClassName("close")[0];
+const spanFood = document.getElementsByClassName("close-food")[0];
 
 // get item class
 const menuItems = document.getElementsByClassName('item');
+const menuItemsFood = document.getElementsByClassName('item-food');
+console.log(menuItemsFood);
 console.log(menuItems);
 // [htmlElement, htmlElement, ...]
 
@@ -46,15 +51,22 @@ span.onclick = function() {
     modalDrink.style.display = "none";
 }
 
+spanFood.onclick = function() {
+    modalFood.style.display = "none";
+}
+
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-    if (event.target == modalDrink) {
+    if (event.target == modalDrink || event.target == modalFood) {
     modalDrink.style.display = "none";
+    modalFood.style.display = "none";
     }
 }
 
+// opens drink modal
 function openModal(event) { 
-    modalDrink.style.display = "flex";
+    modalDrink.style.display = "block";
+    modalFood.style.display = "none";
 }
 
 // adds event listener on click to open modal
@@ -67,6 +79,23 @@ for (const item of menuItems) {
         document.getElementById('popupImage').setAttribute('src', imageSource);
     })
 }
+
+// opens food modal
+function openFoodModal(event) { 
+    modalDrink.style.display = "none";
+    modalFood.style.display = "block";
+}
+
+for (const itemFood of menuItemsFood) {
+    itemFood.addEventListener('click', (e) => {
+        openFoodModal(e);
+        productTitle = e.target.alt;
+        imageSource = e.target.src;
+        document.getElementById('popupImageFood').setAttribute('alt', productTitle);
+        document.getElementById('popupImageFood').setAttribute('src', imageSource);
+    })
+}
+
 
 //FUNCTION FOR THE ADD TO CART POP UP
 function addToCart() {
