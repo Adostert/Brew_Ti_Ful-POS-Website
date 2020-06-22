@@ -4,7 +4,6 @@ let total = 0;
 let productInfo = '';
 let productTitle = '';
 let imageSource = '';
-// const selectProducts 
 
 function checkoutPopUp(){
 
@@ -45,7 +44,6 @@ console.log(menuItems);
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
     modalDrink.style.display = "none";
-    // modalFood.style.display = "none";
 }
 
 // When the user clicks anywhere outside of the modal, close it
@@ -53,10 +51,6 @@ window.onclick = function(event) {
     if (event.target == modalDrink) {
     modalDrink.style.display = "none";
     }
-    // const menuImages = event.target.attributes[1].nodeValue;
-    // const newImage = document.querySelector('.item-image');
-    // newImage.setAttribute('src', menuImages);
-    // console.log(event.target.attributes[1].nodeValue)
 }
 
 function openModal(event) { 
